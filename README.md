@@ -10,9 +10,9 @@ Dynamo nodes for the FreeCAD API
 
 - FreeCAD built with python 3.8.
   
-  - Download a prebuilt from here (0.18.3): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8)
+  - Download a prebuilt from here (0.19): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8)
   
-  - You can build yourself a later verision, follow FreeCAD's doumentation
+  - You can build yourself a different verision, follow FreeCAD's doumentation
 
 ## Installation
 
@@ -28,11 +28,7 @@ Dynamo nodes for the FreeCAD API
 
 Dynamo 2.7 added support for CPython 3.7, so FreeCAD can be called inside dynamo. Everything should work inside Python nodes, I want to add more common FreeCAD commands as nodes, so graphical programming can get a boost in FreeCAD.
 
-
-
 Unfortunately due to a bug in Dynamo 2.7, these nodes are only usable in 2.8 with Python 3.8. 
-
-
 
 ⚠️ **The following screenshots are OUTDATED** ⚠️ 
 
