@@ -1,0 +1,216 @@
+{
+  "Uuid": "dc0f1d3d-4fa1-498d-81c1-7b76158efb03",
+  "IsCustomNode": true,
+  "Category": "DynFreeCAD.Document",
+  "Description": "Create new document in FreeCAD",
+  "Name": "NewDocument",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "newDocumentName",
+      "Id": "120afa9a43aa4d73b3b10df7aa7e5622",
+      "Inputs": [
+        {
+          "Id": "28962bfcaa9e4fda8619e4b7d56ec723",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Run",
+        "TypeName": "bool",
+        "TypeRank": 0,
+        "DefaultValue": "true",
+        "Description": ""
+      },
+      "Id": "44a25ed79ead484c8e6a15641ff85987",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cf4c03196e2b4ca9a749c524ee664a91",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Name",
+        "TypeName": "string",
+        "TypeRank": 0,
+        "DefaultValue": "None",
+        "Description": ""
+      },
+      "Id": "71ac5269790d469bbecba581316468bf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7f2d16ba46034416a2ad9b69c92ca3e0",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\ndocName = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = doc.Name",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "60e4a955122e4deeac0166194a00cd31",
+      "Inputs": [
+        {
+          "Id": "ad6db5bb5248428a83fd948922020475",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9a15a0595b354c979f217b8b8f957a32",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "81fffdb5ac3b48cd8d2cb3ee92d611c0",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded IronPython script."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "cf4c03196e2b4ca9a749c524ee664a91",
+      "End": "9a15a0595b354c979f217b8b8f957a32",
+      "Id": "891b1aa86afc49399ab91e278a3a09c5"
+    },
+    {
+      "Start": "7f2d16ba46034416a2ad9b69c92ca3e0",
+      "End": "ad6db5bb5248428a83fd948922020475",
+      "Id": "827ab2dce79b4bdd8e4dc61dbb089c8c"
+    },
+    {
+      "Start": "81fffdb5ac3b48cd8d2cb3ee92d611c0",
+      "End": "28962bfcaa9e4fda8619e4b7d56ec723",
+      "Id": "370de5d3548f43c2ab624d40bf470a9a"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.7.0.9206",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "120afa9a43aa4d73b3b10df7aa7e5622",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1331.9518291327165,
+        "Y": 668.259145663583
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "44a25ed79ead484c8e6a15641ff85987",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 742.01778164559107,
+        "Y": 754.69226011129058
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "71ac5269790d469bbecba581316468bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 717.90985169807311,
+        "Y": 639.39346471011777
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "60e4a955122e4deeac0166194a00cd31",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1079.5288009108428,
+        "Y": 655.11602771936839
+      }
+    ],
+    "Annotations": [],
+    "X": -547.91681471621587,
+    "Y": -362.00881122299609,
+    "Zoom": 0.9540429248828125
+  }
+}
