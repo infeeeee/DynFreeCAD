@@ -39,7 +39,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\nlist_docs_dict = FreeCAD.listDocuments()\r\nlist_docs = []\r\n\r\n\r\nfor key in list_docs_dict:\r\n\tFreeCAD.closeDocument(key)\r\n\r\nOUT = True",
+      "Code": "import FreeCAD\r\n\r\nlist_docs_dict = FreeCAD.listDocuments()\r\nlist_docs = []\r\n\r\n\r\nfor key in list_docs_dict:\r\n\tFreeCAD.closeDocument(key)\r\n\r\nOUT = True",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "1ac0812064314943bf4aa5fb6e80eb09",
@@ -66,7 +66,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Runs an embedded IronPython script."
+      "Description": "Runs an embedded Python script."
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
@@ -110,7 +110,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.7.0.9206",
+      "Version": "2.8.0.2327",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },

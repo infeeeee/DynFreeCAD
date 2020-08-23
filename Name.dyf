@@ -1,15 +1,11 @@
 {
-  "Uuid": "d1fd94c5-c1ae-49da-96e5-14ea4f8b2b22",
+  "Uuid": "be51e45e-ac85-470b-a579-6527b7586693",
   "IsCustomNode": true,
   "Category": "DynFreeCAD.Document",
-  "Description": "Close an open FreeCAD document",
-  "Name": "CloseDocument",
+  "Description": "Returns the name of a FreeCAD document",
+  "Name": "Name",
   "ElementResolver": {
     "ResolutionMap": {
-      "DSCore.Object": {
-        "Key": "DSCore.Object",
-        "Value": "DSCoreNodes.dll"
-      },
       "System.Object": {
         "Key": "System.Object",
         "Value": null
@@ -20,41 +16,15 @@
   "Outputs": [],
   "Nodes": [
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
-      "NodeType": "InputNode",
-      "Parameter": {
-        "Name": "FreeCADDocument",
-        "TypeName": "System.Object",
-        "TypeRank": 0,
-        "DefaultValue": null,
-        "Description": ""
-      },
-      "Id": "b2de1fceecb144b0ad2807d91049454a",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "08a2205929d04ffeaac8f31167e83dab",
-          "Name": "",
-          "Description": "Symbol",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
-    },
-    {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\ndocName = IN[0].Name\r\n\r\nFreeCAD.closeDocument(docName)\r\n\r\n\r\nOUT = True",
+      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\n\r\nOUT= doc.Name\r\n",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "ef8dcf682d91481583a2c36c71c6f95d",
+      "Id": "9f6c0f3c77244569b518e762a4aee8f9",
       "Inputs": [
         {
-          "Id": "058eda21bbd4423bbe1eef282bde334f",
+          "Id": "be9dd7a0dff44898871cc178ed8eb9b9",
           "Name": "IN[0]",
           "Description": "Input #0",
           "UsingDefaultValue": false,
@@ -65,7 +35,7 @@
       ],
       "Outputs": [
         {
-          "Id": "1efa78eaee40460994586d397ecbcf33",
+          "Id": "269baf5820d649f0920a8cc361ccfc6d",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -78,14 +48,40 @@
       "Description": "Runs an embedded Python script."
     },
     {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADDocument",
+        "TypeName": "System.Object",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "44c7d42bee3040ce81afecd0874da63c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fbfd95fb75704f45a30eae15c05940c6",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "Success",
-      "Id": "b059e013dac74ac5b2d3ef3700dac87d",
+      "Symbol": "string",
+      "Id": "0646f0706dbf4d6ab5541c273dc5002a",
       "Inputs": [
         {
-          "Id": "aac9f48f932e4e1fb2eb2d7acc4741a5",
+          "Id": "d4aebf4d2f18422e9c8fd1aa39286c49",
           "Name": "",
           "Description": "",
           "UsingDefaultValue": false,
@@ -101,14 +97,14 @@
   ],
   "Connectors": [
     {
-      "Start": "08a2205929d04ffeaac8f31167e83dab",
-      "End": "058eda21bbd4423bbe1eef282bde334f",
-      "Id": "6251a7cc696f49b3ad1c0fec4da110f0"
+      "Start": "269baf5820d649f0920a8cc361ccfc6d",
+      "End": "d4aebf4d2f18422e9c8fd1aa39286c49",
+      "Id": "f75b32b992c04094891a7bb517cd3a49"
     },
     {
-      "Start": "1efa78eaee40460994586d397ecbcf33",
-      "End": "aac9f48f932e4e1fb2eb2d7acc4741a5",
-      "Id": "3098439aa8894723aaa9646e56434471"
+      "Start": "fbfd95fb75704f45a30eae15c05940c6",
+      "End": "be9dd7a0dff44898871cc178ed8eb9b9",
+      "Id": "f0f36b8978c64ec1afc8c8311922aefa"
     }
   ],
   "Dependencies": [],
@@ -138,38 +134,38 @@
     "NodeViews": [
       {
         "ShowGeometry": true,
-        "Name": "Input",
-        "Id": "b2de1fceecb144b0ad2807d91049454a",
+        "Name": "Python Script",
+        "Id": "9f6c0f3c77244569b518e762a4aee8f9",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -16.0,
-        "Y": 419.0
+        "X": 533.0,
+        "Y": 437.0
       },
       {
         "ShowGeometry": true,
-        "Name": "Python Script",
-        "Id": "ef8dcf682d91481583a2c36c71c6f95d",
+        "Name": "Input",
+        "Id": "44c7d42bee3040ce81afecd0874da63c",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 509.0,
-        "Y": 483.0
+        "X": 24.0,
+        "Y": 453.0
       },
       {
         "ShowGeometry": true,
         "Name": "Output",
-        "Id": "b059e013dac74ac5b2d3ef3700dac87d",
+        "Id": "0646f0706dbf4d6ab5541c273dc5002a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 775.0,
-        "Y": 498.0
+        "X": 856.0,
+        "Y": 479.0
       }
     ],
     "Annotations": [],
-    "X": 230.0,
-    "Y": 21.0,
+    "X": 0.0,
+    "Y": 0.0,
     "Zoom": 1.0
   }
 }

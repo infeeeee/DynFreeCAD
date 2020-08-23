@@ -14,7 +14,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "newDocumentName",
+      "Symbol": "FreeCADDocument",
       "Id": "120afa9a43aa4d73b3b10df7aa7e5622",
       "Inputs": [
         {
@@ -86,7 +86,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\ndocName = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = doc.Name",
+      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\ndocName = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = doc",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "60e4a955122e4deeac0166194a00cd31",
@@ -122,7 +122,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Runs an embedded IronPython script."
+      "Description": "Runs an embedded Python script."
     }
   ],
   "Connectors": [
@@ -150,7 +150,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.7.0.9206",
+      "Version": "2.8.0.2327",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },

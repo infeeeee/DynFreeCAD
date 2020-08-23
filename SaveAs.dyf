@@ -5,7 +5,12 @@
   "Description": "Save FreeCAD document to a path",
   "Name": "SaveAs",
   "ElementResolver": {
-    "ResolutionMap": {}
+    "ResolutionMap": {
+      "System.Object": {
+        "Key": "System.Object",
+        "Value": null
+      }
+    }
   },
   "Inputs": [],
   "Outputs": [],
@@ -39,7 +44,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\ndocPath = IN[0]\r\n\r\nFreeCAD.ActiveDocument.saveAs(docPath)\r\n\r\nOUT = docPath",
+      "Code": "import FreeCAD\r\n\r\ndocPath = IN[0]\r\ndoc = IN[1]\r\n\r\nif doc==None:\r\n\tdocSave = FreeCAD.ActiveDocument\r\nelse:\r\n\tdocSave = doc\r\n\r\n\r\ndocSave.saveAs(docPath)\r\n\r\n\r\nOUT = docSave",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "4ec9ca83a65b40fd9dfa42910b86f18a",
@@ -48,6 +53,15 @@
           "Id": "d00d45ddb41d44a2a096e22c7c6d9532",
           "Name": "IN[0]",
           "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7f8039db456740a0bcd987ff2402238b",
+          "Name": "IN[1]",
+          "Description": "Input #1",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -66,13 +80,13 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Runs an embedded IronPython script."
+      "Description": "Runs an embedded Python script."
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "activeDocumentName",
+      "Symbol": "FreeCADDocument",
       "Id": "7d8587c3e8144b04a1c0bfa749122671",
       "Inputs": [
         {
@@ -88,6 +102,32 @@
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADDocument",
+        "TypeName": "System.Object",
+        "TypeRank": 0,
+        "DefaultValue": "None",
+        "Description": ""
+      },
+      "Id": "06e66cb80ae1466bb5e84c4aff065653",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "36e10337ce2844218efe3cc20ea41640",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
@@ -100,6 +140,11 @@
       "Start": "78bbd766df6e430a95f18d857c1be4cf",
       "End": "1e51be6d44f349e1aee56f855b1f2551",
       "Id": "2dc8a7e87a0a4d11b1a0c18c53997800"
+    },
+    {
+      "Start": "36e10337ce2844218efe3cc20ea41640",
+      "End": "7f8039db456740a0bcd987ff2402238b",
+      "Id": "c207070f2a52459783ebc9a5ded2527a"
     }
   ],
   "Dependencies": [],
@@ -110,7 +155,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.7.0.9206",
+      "Version": "2.8.0.2327",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -144,8 +189,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 502.0,
-        "Y": 520.5
+        "X": 500.0,
+        "Y": 515.5
       },
       {
         "ShowGeometry": true,
@@ -156,6 +201,16 @@
         "Excluded": false,
         "X": 828.0,
         "Y": 558.5
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "06e66cb80ae1466bb5e84c4aff065653",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 77.0,
+        "Y": 687.0
       }
     ],
     "Annotations": [],
