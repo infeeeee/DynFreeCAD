@@ -67,7 +67,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "Path",
+        "Name": "filePath",
         "TypeName": "string",
         "TypeRank": 0,
         "DefaultValue": null,
@@ -159,8 +159,8 @@
       }
     ],
     "Annotations": [],
-    "X": -71.0,
-    "Y": -119.0,
+    "X": -139.0,
+    "Y": -147.0,
     "Zoom": 1.0
   }
 }

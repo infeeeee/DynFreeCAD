@@ -19,7 +19,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "Path",
+        "Name": "path",
         "TypeName": "string",
         "TypeRank": 0,
         "DefaultValue": null,

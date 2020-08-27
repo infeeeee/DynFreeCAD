@@ -14,7 +14,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "Run",
+        "Name": "run",
         "TypeName": "bool",
         "TypeRank": 0,
         "DefaultValue": "true",
@@ -72,7 +72,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "Success",
+      "Symbol": "success",
       "Id": "baabf871e6da4310b4a39eb5385d9543",
       "Inputs": [
         {

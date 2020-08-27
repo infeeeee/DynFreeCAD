@@ -35,7 +35,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "Run",
+        "Name": "run",
         "TypeName": "bool",
         "TypeRank": 0,
         "DefaultValue": "true",
@@ -61,7 +61,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "Name",
+        "Name": "name",
         "TypeName": "string",
         "TypeRank": 0,
         "DefaultValue": "None",
