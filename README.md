@@ -30,16 +30,16 @@ Dynamo 2.7 added support for CPython 3.7, so FreeCAD can be called inside dynamo
 
 Unfortunately due to a bug in Dynamo 2.7, these nodes are only usable in 2.8 with Python 3.8. 
 
-### Version matrix
+### Compatibility matrix
 
 Table updated: 2020-09-07
 
-| Dynamo version | Dynamo cPython version | FreeCAD API | DynFreeCAD | Revit  |
-| -------------- | ---------------------- | ----------- | ---------- | ------ |
-| 2.6            | ❌                      | ❌           | ❌          | 2021.1 |
-| 2.7            | 3.7                    | ✔           | ❌          | ❌      |
-| 2.8            | 3.8                    | ✔           | ✔          | ❌      |
-| 2.9            | 3.8                    | ✔           | ✔          | ❌      |
+| Dynamo | cPython in Dynamo | FreeCAD API | DynFreeCAD | Revit  |
+| ------ | ----------------- | ----------- | ---------- | ------ |
+| 2.6    | ❌                 | ❌           | ❌          | 2021.1 |
+| 2.7    | 3.7               | ✔           | ❌          | ❌      |
+| 2.8    | 3.8               | ✔           | ✔          | ❌      |
+| 2.9    | 3.8               | ✔           | ✔          | ❌      |
 
 ## Usage and tips
 
