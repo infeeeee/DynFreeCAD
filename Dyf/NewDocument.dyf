@@ -86,7 +86,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "# import\r\nimport clr\r\nimport FreeCAD\r\n\r\ndocName = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = doc",
+      "Code": "\r\ndocName = IN[1]\r\nFreeCAD = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = doc",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "60e4a955122e4deeac0166194a00cd31",
@@ -108,6 +108,15 @@
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
+        },
+        {
+          "Id": "9e54d5be891948a18038e4a0a2b2b4c6",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
         }
       ],
       "Outputs": [
@@ -123,23 +132,54 @@
       ],
       "Replication": "Disabled",
       "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADModule",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "bef76c2c299f4a78add37b84f7e5f47b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4cb7234d5c0f4accb9807a5b6893dccc",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
     {
       "Start": "cf4c03196e2b4ca9a749c524ee664a91",
-      "End": "9a15a0595b354c979f217b8b8f957a32",
-      "Id": "891b1aa86afc49399ab91e278a3a09c5"
+      "End": "9e54d5be891948a18038e4a0a2b2b4c6",
+      "Id": "859def3c16f3473f8b83866e632e7e41"
     },
     {
       "Start": "7f2d16ba46034416a2ad9b69c92ca3e0",
-      "End": "ad6db5bb5248428a83fd948922020475",
-      "Id": "827ab2dce79b4bdd8e4dc61dbb089c8c"
+      "End": "9a15a0595b354c979f217b8b8f957a32",
+      "Id": "df031647f0234531bc75a337d53cc32b"
     },
     {
       "Start": "81fffdb5ac3b48cd8d2cb3ee92d611c0",
       "End": "28962bfcaa9e4fda8619e4b7d56ec723",
       "Id": "370de5d3548f43c2ab624d40bf470a9a"
+    },
+    {
+      "Start": "4cb7234d5c0f4accb9807a5b6893dccc",
+      "End": "ad6db5bb5248428a83fd948922020475",
+      "Id": "7ab65a298545424d845ebcb11b1c9039"
     }
   ],
   "Dependencies": [],
@@ -150,7 +190,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.8.0.2327",
+      "Version": "2.9.0.2476",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -206,11 +246,21 @@
         "Excluded": false,
         "X": 1079.5288009108428,
         "Y": 655.11602771936839
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "bef76c2c299f4a78add37b84f7e5f47b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 677.03118787402082,
+        "Y": 854.26849250321266
       }
     ],
     "Annotations": [],
-    "X": -547.91681471621587,
-    "Y": -362.00881122299609,
+    "X": -303.91681471621587,
+    "Y": -17.008811222996087,
     "Zoom": 0.9540429248828125
   }
 }

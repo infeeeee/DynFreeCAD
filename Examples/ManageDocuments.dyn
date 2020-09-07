@@ -1,0 +1,1034 @@
+{
+  "Uuid": "6572529c-97dc-485d-8a70-acdcd1c4651f",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "ManageDocuments",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "f5b1138c-b0a7-4fd8-8884-839ba2d03e9b",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "cad81835f70443e1b82e25c807e255b8",
+      "Inputs": [
+        {
+          "Id": "809af31c2d894c789641af58b75069c2",
+          "Name": "FreeCADBinPath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "62ff121fae59439b8450dc8bc2037004",
+          "Name": "FreeCADversion",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e7419349cd643d28117fbacc37e587d",
+          "Name": "sysPaths",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2da716fd8240473e95e25c00cab8f686",
+          "Name": "FreeCADModule",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Initialize FreeCAD api and FreeCAD version info"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8\\bin",
+      "InputValue": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8\\bin",
+      "NodeType": "ExtensionNode",
+      "Id": "19ffb4b0dc684070b3d9441f4f83f5ca",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "09ed579bf7964699af9ee7f1b519182b",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "7b8962e7-5279-4865-9f4d-005ffa798827",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "ca7e929fee13417bae7235dbd730ba63",
+      "Inputs": [
+        {
+          "Id": "2bd8c788cef34ae3a5afe3cc2b29e568",
+          "Name": "filePath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2be7af94328492ea1f7c22cdbe6b786",
+          "Name": "FreeCADModule",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6fffa34febb2416ea999530acdf9d568",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Open a document in FreeCAD"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8\\data\\examples\\ArchDetail.FCStd",
+      "InputValue": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8\\data\\examples\\ArchDetail.FCStd",
+      "NodeType": "ExtensionNode",
+      "Id": "7181914d94a644f38335bd8093f2dc42",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9e0e427cf69d4d88a661ac12c276030e",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "dc0f1d3d-4fa1-498d-81c1-7b76158efb03",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "d6f4aeef2b5d4082ba04eb833a666e1f",
+      "Inputs": [
+        {
+          "Id": "2d3faf4b507d4833bcf89aa61516fcc3",
+          "Name": "run",
+          "Description": "bool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c54af25da36842c1b163f20079b8272f",
+          "Name": "name",
+          "Description": "string\nDefault value : None",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77316fea312845599033e6710981a3cc",
+          "Name": "FreeCADModule",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "801fbed54e7d4ce3bcc65e14383ac921",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create new document in FreeCAD"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "c6eea3dc-6d88-4172-9fe6-b31931b23f8e",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "c119cbd79c3e43b583d96b2e9a3c3c22",
+      "Inputs": [
+        {
+          "Id": "1d7f9dffb92742dabb1e01d8ec94227d",
+          "Name": "reload",
+          "Description": "bool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0e44cf228b77437f9649301c440e4838",
+          "Name": "FreeCADDocuments",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "List all open FreeCAD documents"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "fb45d725-7bb6-4605-a746-aeba02fa0c7b",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "bb0e56bdb0df4d7f8761e9f26125878c",
+      "Inputs": [
+        {
+          "Id": "19774d7d20cf463d8d66bd41025582af",
+          "Name": "reload",
+          "Description": "bool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4015971c8aa84aeeafa779bbc23d1387",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get active FreeCAD document"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "46c1a48b4e354018952bc6fa0b21e1e8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3723b77c7c6046dd80a434be8f743394",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.Keys",
+      "Id": "12303ce8cb8b49b49a1db7a5c34b4686",
+      "Inputs": [
+        {
+          "Id": "9b760e5a02b743d59c143087787341ec",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c7a39fcc145f4de896b5033bb17f0c9d",
+          "Name": "keys",
+          "Description": "The keys of the Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Produces the keys in a Dictionary.\n\nDictionary.Keys: string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "afc806ba8e9c4e83814d754800e5d5be",
+      "Inputs": [
+        {
+          "Id": "285e0b2ede3d4d0882a6331106dee2e7",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "70f2c6d1ceef4cf0b4ed0d7c0e1a68c1",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d04358197a814c50b187641469572508",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;",
+      "Id": "f0185d525fda4b56bc7e7c705b0dc41c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "217f38f4280849d8aab0a3abcd76d68f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DesignScript.Builtin.Dictionary.ValueAtKey@string",
+      "Id": "6c48afcd9a2b43ff8ef4f8857c94243d",
+      "Inputs": [
+        {
+          "Id": "e61604c89b0a42b09611f0088bec8afc",
+          "Name": "dictionary",
+          "Description": "DesignScript.Builtin.Dictionary",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6fa7e463377341019938fce4d6a83ad9",
+          "Name": "key",
+          "Description": "The key in the Dictionary to obtain.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "43bc09429e674c1c86a72271107908bf",
+          "Name": "value",
+          "Description": "The value at the specified key or null if it is not set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Obtain the value at a specified key\n\nDictionary.ValueAtKey (key: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "5f743ef9-e68d-4e4f-8cd2-4f8c9129ad4d",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e35d1670249c4929ad5adf8920d9d4ce",
+      "Inputs": [
+        {
+          "Id": "b92aae54d4984dc1bbfd21c7f308113c",
+          "Name": "FreeCADDocument",
+          "Description": "Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bc3636e9288d4587b1c1b9562d7edf96",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set active FreeCAD document"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "12e69d96-5464-43a5-9da1-6e490716001d",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "803392f956fe44b59f293a30fe14d66a",
+      "Inputs": [
+        {
+          "Id": "a30d622eb2994a7bb0dfbf0b7f441139",
+          "Name": "path",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2eb7a69ac82c416b89f167ebe81cbcd1",
+          "Name": "FreeCADDocument",
+          "Description": "Object\nDefault value : None",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4075f3e4f59f4f889bf2d692dd3f46d7",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Save FreeCAD document to a path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "e9b0a944-782a-4769-9cd8-6942aebd6ba1",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e83dab1f1881429ca788c0ef85a404b1",
+      "Inputs": [
+        {
+          "Id": "824fcc52ecd0407aacb74b12b03830cd",
+          "Name": "FreeCADDocument",
+          "Description": "Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f4be4bbe33ea4393a4d360a68cbd8c77",
+          "Name": "filePath",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Full path including filename of a FreeCAD document"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\gyetpet\\Desktop\\test.FCStd",
+      "InputValue": "C:\\Users\\gyetpet\\Desktop\\test.FCStd",
+      "NodeType": "ExtensionNode",
+      "Id": "7317a41936ff42cd9390d0d637b491e7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "175feefa902f4afabcf473f33450d404",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "12e69d96-5464-43a5-9da1-6e490716001d",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b94566a2dd744462bf58acc666c61f36",
+      "Inputs": [
+        {
+          "Id": "b23fc8baf800435da38aeb04116f39fd",
+          "Name": "path",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "72c0e4b8788b4b81bebf10dc7c1f7b99",
+          "Name": "FreeCADDocument",
+          "Description": "Object\nDefault value : None",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c88c4f46b9ab4b97a0468d882b43ac54",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Save FreeCAD document to a path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "d1fd94c5-c1ae-49da-96e5-14ea4f8b2b22",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "59b4835e230f4cdab942ca98a2ff0d8a",
+      "Inputs": [
+        {
+          "Id": "6376f41167434a28870b61162bf3e68a",
+          "Name": "FreeCADDocument",
+          "Description": "Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "70ed36f3c8904d8da48020e46003d5d5",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Close an open FreeCAD document"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "be51e45e-ac85-470b-a579-6527b7586693",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "ef3e739a7e38447699b371d214252508",
+      "Inputs": [
+        {
+          "Id": "354cfc5d94594844a850e532743eb65e",
+          "Name": "FreeCADDocument",
+          "Description": "Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6737a141cbe044f494bd1173f10e3bbd",
+          "Name": "string",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the name of a FreeCAD document"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "ef82351e-0aad-48f4-85cf-8ca0b314bbc5",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b9bfb5dfe6704d858c116baaecfc81fa",
+      "Inputs": [
+        {
+          "Id": "c2dad59c9bd44fe3bea79fe5484833c0",
+          "Name": "run",
+          "Description": "bool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "87f0b66b5d7b488593ea321b895af73c",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Close all open FreeCAD documents"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "9a0e8602a5e34695a704542ed979598c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "867187cb91a94013becd03d6b75981ca",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2da716fd8240473e95e25c00cab8f686",
+      "End": "d2be7af94328492ea1f7c22cdbe6b786",
+      "Id": "bf5efc4cb1e145b89ce7e845d032c7b5"
+    },
+    {
+      "Start": "2da716fd8240473e95e25c00cab8f686",
+      "End": "77316fea312845599033e6710981a3cc",
+      "Id": "352d917be1d644de92003c86235f917c"
+    },
+    {
+      "Start": "09ed579bf7964699af9ee7f1b519182b",
+      "End": "809af31c2d894c789641af58b75069c2",
+      "Id": "b5ab9f1ac8744da294cc86f84971fad5"
+    },
+    {
+      "Start": "9e0e427cf69d4d88a661ac12c276030e",
+      "End": "2bd8c788cef34ae3a5afe3cc2b29e568",
+      "Id": "8a7e6e6e0c4f44899519640f145b107e"
+    },
+    {
+      "Start": "0e44cf228b77437f9649301c440e4838",
+      "End": "9b760e5a02b743d59c143087787341ec",
+      "Id": "e69e5ab8cc8e4070812653c4fa36e253"
+    },
+    {
+      "Start": "0e44cf228b77437f9649301c440e4838",
+      "End": "e61604c89b0a42b09611f0088bec8afc",
+      "Id": "a72d6e4074434d8c809b8433bedb84db"
+    },
+    {
+      "Start": "4015971c8aa84aeeafa779bbc23d1387",
+      "End": "2eb7a69ac82c416b89f167ebe81cbcd1",
+      "Id": "a41c3756c23c4b158c839ad6b22e0fab"
+    },
+    {
+      "Start": "4015971c8aa84aeeafa779bbc23d1387",
+      "End": "354cfc5d94594844a850e532743eb65e",
+      "Id": "885a56dafb8c47ceaf8e1fba2b392979"
+    },
+    {
+      "Start": "3723b77c7c6046dd80a434be8f743394",
+      "End": "19774d7d20cf463d8d66bd41025582af",
+      "Id": "2e74de299e5b4619895ccc3e5e65d319"
+    },
+    {
+      "Start": "3723b77c7c6046dd80a434be8f743394",
+      "End": "1d7f9dffb92742dabb1e01d8ec94227d",
+      "Id": "b15ebcd4fbbb4eb99dd9c0dfc17266c5"
+    },
+    {
+      "Start": "c7a39fcc145f4de896b5033bb17f0c9d",
+      "End": "285e0b2ede3d4d0882a6331106dee2e7",
+      "Id": "cc75c36d1c9c40bfb6a5110b12996538"
+    },
+    {
+      "Start": "d04358197a814c50b187641469572508",
+      "End": "6fa7e463377341019938fce4d6a83ad9",
+      "Id": "8076b486f2fa4fc083c8de7ae386b346"
+    },
+    {
+      "Start": "217f38f4280849d8aab0a3abcd76d68f",
+      "End": "70f2c6d1ceef4cf0b4ed0d7c0e1a68c1",
+      "Id": "9f99650c13714d7681c84652e42cccb8"
+    },
+    {
+      "Start": "43bc09429e674c1c86a72271107908bf",
+      "End": "b92aae54d4984dc1bbfd21c7f308113c",
+      "Id": "18af5fda5c6d42eaa809b23d19c91d3a"
+    },
+    {
+      "Start": "43bc09429e674c1c86a72271107908bf",
+      "End": "72c0e4b8788b4b81bebf10dc7c1f7b99",
+      "Id": "ee6b1bc3311a46dbac360551b8b6a2b3"
+    },
+    {
+      "Start": "43bc09429e674c1c86a72271107908bf",
+      "End": "824fcc52ecd0407aacb74b12b03830cd",
+      "Id": "acab54bf07ee4e21b592ffb6dad7c570"
+    },
+    {
+      "Start": "43bc09429e674c1c86a72271107908bf",
+      "End": "6376f41167434a28870b61162bf3e68a",
+      "Id": "7cc592793c2146e084c0470e1913c2cc"
+    },
+    {
+      "Start": "f4be4bbe33ea4393a4d360a68cbd8c77",
+      "End": "b23fc8baf800435da38aeb04116f39fd",
+      "Id": "98b2f4e99769423bbec48165443d2f3c"
+    },
+    {
+      "Start": "175feefa902f4afabcf473f33450d404",
+      "End": "a30d622eb2994a7bb0dfbf0b7f441139",
+      "Id": "89f812f12456478e9e37298377e96037"
+    },
+    {
+      "Start": "867187cb91a94013becd03d6b75981ca",
+      "End": "c2dad59c9bd44fe3bea79fe5484833c0",
+      "Id": "9d86adbc54cb4a69bbc88b43635208db"
+    }
+  ],
+  "Dependencies": [
+    "f5b1138c-b0a7-4fd8-8884-839ba2d03e9b",
+    "7b8962e7-5279-4865-9f4d-005ffa798827",
+    "dc0f1d3d-4fa1-498d-81c1-7b76158efb03",
+    "c6eea3dc-6d88-4172-9fe6-b31931b23f8e",
+    "fb45d725-7bb6-4605-a746-aeba02fa0c7b",
+    "5f743ef9-e68d-4e4f-8cd2-4f8c9129ad4d",
+    "12e69d96-5464-43a5-9da1-6e490716001d",
+    "e9b0a944-782a-4769-9cd8-6942aebd6ba1",
+    "d1fd94c5-c1ae-49da-96e5-14ea4f8b2b22",
+    "be51e45e-ac85-470b-a579-6527b7586693",
+    "ef82351e-0aad-48f4-85cf-8ca0b314bbc5"
+  ],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.9.0.2476",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -8.8140373229980469,
+      "EyeY": 74.791996002197266,
+      "EyeZ": 40.309284210205078,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Initialize",
+        "Id": "cad81835f70443e1b82e25c807e255b8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 610.5,
+        "Y": 322.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "19ffb4b0dc684070b3d9441f4f83f5ca",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 191.5,
+        "Y": 322.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "OpenDocument",
+        "Id": "ca7e929fee13417bae7235dbd730ba63",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1028.5,
+        "Y": 415.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "7181914d94a644f38335bd8093f2dc42",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 610.5,
+        "Y": 482.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "NewDocument",
+        "Id": "d6f4aeef2b5d4082ba04eb833a666e1f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1025.2090036773077,
+        "Y": 602.12515236004356
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ListDocuments",
+        "Id": "c119cbd79c3e43b583d96b2e9a3c3c22",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2.2936254172373083,
+        "Y": 1091.3837876172447
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ActiveDocument",
+        "Id": "bb0e56bdb0df4d7f8761e9f26125878c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 9.31930987493206,
+        "Y": 933.4182717266965
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "46c1a48b4e354018952bc6fa0b21e1e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -232.70637458276269,
+        "Y": 1040.6337876172447
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Dictionary.Keys",
+        "Id": "12303ce8cb8b49b49a1db7a5c34b4686",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 356.65689783514722,
+        "Y": 1175.4912433485895
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GetItemAtIndex",
+        "Id": "afc806ba8e9c4e83814d754800e5d5be",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 662.65689783514722,
+        "Y": 1214.4912433485895
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f0185d525fda4b56bc7e7c705b0dc41c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 356.65689783514722,
+        "Y": 1283.7045766819231
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Dictionary.ValueAtKey",
+        "Id": "6c48afcd9a2b43ff8ef4f8857c94243d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 881.7110961953299,
+        "Y": 1099.2298179804291
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SetActiveDocument",
+        "Id": "e35d1670249c4929ad5adf8920d9d4ce",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1192.71109619533,
+        "Y": 1099.2298179804291
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SaveAs",
+        "Id": "803392f956fe44b59f293a30fe14d66a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 588.74134681144255,
+        "Y": 954.20945377960959
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileName",
+        "Id": "e83dab1f1881429ca788c0ef85a404b1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 736.43870400734636,
+        "Y": 1608.6965029347971
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "7317a41936ff42cd9390d0d637b491e7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 236.45369587027233,
+        "Y": 802.02615214432672
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SaveAs",
+        "Id": "b94566a2dd744462bf58acc666c61f36",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1154.830923837771,
+        "Y": 1607.4148602704322
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CloseDocument",
+        "Id": "59b4835e230f4cdab942ca98a2ff0d8a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1174.2054574433923,
+        "Y": 1369.1050248252766
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Name",
+        "Id": "ef3e739a7e38447699b371d214252508",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 594.80791961975,
+        "Y": 830.08950332586267
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CloseAllDocuments",
+        "Id": "b9bfb5dfe6704d858c116baaecfc81fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 57.6271263915273,
+        "Y": 1520.55614460153
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "9a0e8602a5e34695a704542ed979598c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -235.741326126513,
+        "Y": 1523.19108307349
+      }
+    ],
+    "Annotations": [],
+    "X": 615.20195706237291,
+    "Y": -49.839797560942657,
+    "Zoom": 0.59777487894692549
+  }
+}

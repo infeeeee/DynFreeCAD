@@ -2,7 +2,7 @@
 
 Dynamo nodes for the FreeCAD API
 
-**Early ,work in progress**, PRs are welcomed!
+**Early, work in progress**, PRs are welcomed!
 
 ## Requirements
 
@@ -20,31 +20,48 @@ Dynamo nodes for the FreeCAD API
 
 - Open DynamoSandbox.exe
 
-- Settings ➡ Manage Node and  Package Paths... ➡ Add the folder with ➕ where you cloned ➡ Accept changes
+- Settings ➡ Manage Node and  Package Paths... ➡ Add a new folder with ➕, select the `Dyf` subfolder from where you cloned ➡ Accept changes
 
 - (Dynamo package manager soon!)
 
-## Usage and tips
+### FreeCAD API in Dynamo
 
 Dynamo 2.7 added support for CPython 3.7, so FreeCAD can be called inside dynamo. Everything should work inside Python nodes, I want to add more common FreeCAD commands as nodes, so graphical programming can get a boost in FreeCAD.
 
 Unfortunately due to a bug in Dynamo 2.7, these nodes are only usable in 2.8 with Python 3.8. 
 
-⚠️ **The following screenshots are OUTDATED** ⚠️ 
+### Version matrix
 
-TODO: update screenshots
+Table updated: 2020-09-07
 
-### Initialize FreeCAD
+| Dynamo version | Dynamo cPython version | FreeCAD API | DynFreeCAD | Revit  |
+| -------------- | ---------------------- | ----------- | ---------- | ------ |
+| 2.6            | ❌                      | ❌           | ❌          | 2021.1 |
+| 2.7            | 3.7                    | ✔           | ❌          | ❌      |
+| 2.8            | 3.8                    | ✔           | ✔          | ❌      |
+| 2.9            | 3.8                    | ✔           | ✔          | ❌      |
 
-Always start with these node. Add the path to the `bin` folder in the FreeCAD folder. After you initialized somewhere in the graph, you can simply use `import FreeCAD` in any nodes:
+## Usage and tips
 
-![Initialize](Screenshots/Initialize.png)
+⚠️ **As DynFreeCAD is under developement, it's possible that some screenshots are outdated** ⚠️
+
+See `Examples` folder for some documents.
+
+### Initialize FreeCAD and open or create a new document
+
+Always start with these node. Add the path to the `bin` folder of FreeCAD. Connect the FreeCADModule ports!
+
+![Initialize and open a document](Screenshots/Initialize+open.png)
 
 ### Manage documents
 
-If you want to update the list nodes, connect a Boolean node to the Run input, and change to True or False
+It's pretty straightforward how you have to manage documents with these nodes. For the `Refresh` and `Run` ports connect a boolean to update or run them. See `ManageDocuments.dyn` in the Examples folder.
 
 ![Documents](Screenshots/Documents.png)
+
+### Manage properties
+
+![Properties](Screenshots/Properties.png)
 
 ### Python script
 
