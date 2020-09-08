@@ -43,9 +43,9 @@ Table updated: 2020-09-07
 
 ## Usage and tips
 
-<b align="center">
-⚠️ As DynFreeCAD is under developement, it's possible that some screenshots and documentation are outdated ⚠️
-</b>
+<p align="center">
+⚠️ <b>As DynFreeCAD is under developement, it's possible that some screenshots and documentation are outdated</b> ⚠️
+</p>
 
 Detailed documentation is in the [wiki](https://github.com/infeeeee/DynFreeCAD/wiki). 
 
