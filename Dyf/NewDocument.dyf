@@ -11,27 +11,6 @@
   "Outputs": [],
   "Nodes": [
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
-      "NodeType": "OutputNode",
-      "ElementResolver": null,
-      "Symbol": "FreeCADDocument",
-      "Id": "120afa9a43aa4d73b3b10df7aa7e5622",
-      "Inputs": [
-        {
-          "Id": "28962bfcaa9e4fda8619e4b7d56ec723",
-          "Name": "",
-          "Description": "",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [],
-      "Replication": "Disabled",
-      "Description": "A function output, use with custom nodes"
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
@@ -86,7 +65,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "\r\ndocName = IN[1]\r\nFreeCAD = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = doc",
+      "Code": "\r\ndocName = IN[1]\r\nFreeCAD = IN[0]\r\n\r\nif docName==None:\r\n\tdoc = FreeCAD.newDocument()\r\nelse:\r\n\tdoc = FreeCAD.newDocument(docName)\r\n\r\nOUT = [doc, FreeCAD]",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "60e4a955122e4deeac0166194a00cd31",
@@ -158,6 +137,87 @@
       ],
       "Replication": "Disabled",
       "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "a[0];\na[1];",
+      "Id": "9a66abf5ffca47708450843bed14e181",
+      "Inputs": [
+        {
+          "Id": "cf624421a9da4c90817d38da5f538e4b",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7010d74a32b84325ad5ef9821f32cc62",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "71e6e916d0144c3cbf382563301f3774",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "FreeCADDocument",
+      "Id": "d1a5dc2eea574538ba8e973b6fc06d62",
+      "Inputs": [
+        {
+          "Id": "90ac6c390d3d4bf8a5cf75bd2d124b65",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "FreeCADModule",
+      "Id": "187c10bbe9a643b883c109f97cfa5a4b",
+      "Inputs": [
+        {
+          "Id": "79ccffc97229457a8cc8a34baa453f00",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
     }
   ],
   "Connectors": [
@@ -173,13 +233,23 @@
     },
     {
       "Start": "81fffdb5ac3b48cd8d2cb3ee92d611c0",
-      "End": "28962bfcaa9e4fda8619e4b7d56ec723",
-      "Id": "370de5d3548f43c2ab624d40bf470a9a"
+      "End": "cf624421a9da4c90817d38da5f538e4b",
+      "Id": "08559e227c9d46379234caaf3d34aad3"
     },
     {
       "Start": "4cb7234d5c0f4accb9807a5b6893dccc",
       "End": "ad6db5bb5248428a83fd948922020475",
       "Id": "7ab65a298545424d845ebcb11b1c9039"
+    },
+    {
+      "Start": "7010d74a32b84325ad5ef9821f32cc62",
+      "End": "90ac6c390d3d4bf8a5cf75bd2d124b65",
+      "Id": "0582a361a2b14244ab718e2cd1e27e6c"
+    },
+    {
+      "Start": "71e6e916d0144c3cbf382563301f3774",
+      "End": "79ccffc97229457a8cc8a34baa453f00",
+      "Id": "f0203a59282746c5ae7cdf9dc36606a5"
     }
   ],
   "Dependencies": [],
@@ -190,15 +260,15 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2476",
+      "Version": "2.8.0.2471",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -17.0,
-      "EyeY": 24.0,
-      "EyeZ": 50.0,
+      "EyeX": -8.8140373229980469,
+      "EyeY": 74.791996002197266,
+      "EyeZ": 40.309284210205078,
       "LookX": 12.0,
       "LookY": -13.0,
       "LookZ": -58.0,
@@ -209,23 +279,13 @@
     "NodeViews": [
       {
         "ShowGeometry": true,
-        "Name": "Output",
-        "Id": "120afa9a43aa4d73b3b10df7aa7e5622",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 1331.9518291327165,
-        "Y": 668.259145663583
-      },
-      {
-        "ShowGeometry": true,
         "Name": "Input",
         "Id": "44a25ed79ead484c8e6a15641ff85987",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 742.01778164559107,
-        "Y": 754.69226011129058
+        "X": 686.68183464238632,
+        "Y": 830.7326488266
       },
       {
         "ShowGeometry": true,
@@ -234,8 +294,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 717.90985169807311,
-        "Y": 639.39346471011777
+        "X": 686.68183464238632,
+        "Y": 747.7326488266
       },
       {
         "ShowGeometry": true,
@@ -244,8 +304,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1079.5288009108428,
-        "Y": 655.11602771936839
+        "X": 1035.6818346423863,
+        "Y": 721.7326488266
       },
       {
         "ShowGeometry": true,
@@ -254,13 +314,43 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 677.03118787402082,
-        "Y": 854.26849250321266
+        "X": 686.68183464238632,
+        "Y": 664.7326488266
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "9a66abf5ffca47708450843bed14e181",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1259.6818346423863,
+        "Y": 725.94598215993335
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "d1a5dc2eea574538ba8e973b6fc06d62",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1470.6818346423863,
+        "Y": 688.51931549326673
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "187c10bbe9a643b883c109f97cfa5a4b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1470.6818346423863,
+        "Y": 772.51931549326673
       }
     ],
     "Annotations": [],
-    "X": -303.91681471621587,
-    "Y": -17.008811222996087,
+    "X": -492.91681471621587,
+    "Y": -192.00881122299609,
     "Zoom": 0.9540429248828125
   }
 }

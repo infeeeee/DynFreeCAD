@@ -114,6 +114,15 @@
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
+        },
+        {
+          "Id": "2d184486abd44b87821c39c3aa4ba99c",
+          "Name": "FreeCADModule",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
         }
       ],
       "Replication": "Auto",
@@ -121,8 +130,8 @@
     },
     {
       "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
-      "HintPath": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8\\data\\examples\\ArchDetail.FCStd",
-      "InputValue": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8\\data\\examples\\ArchDetail.FCStd",
+      "HintPath": "E:\\Nextcloud\\BIM-CAFM-CAD\\freecad\\Part Test.FCStd",
+      "InputValue": "E:\\Nextcloud\\BIM-CAFM-CAD\\freecad\\Part Test.FCStd",
       "NodeType": "ExtensionNode",
       "Id": "7181914d94a644f38335bd8093f2dc42",
       "Inputs": [],
@@ -184,6 +193,15 @@
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
+        },
+        {
+          "Id": "3efd761d5c0a4f9ab171000d5867b214",
+          "Name": "FreeCADModule",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
         }
       ],
       "Replication": "Auto",
@@ -201,6 +219,15 @@
           "Name": "reload",
           "Description": "bool\nDefault value : true",
           "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1ecddc239bd44131b12432756165dfc6",
+          "Name": "FreeCADModule",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
@@ -232,6 +259,15 @@
           "Name": "reload",
           "Description": "bool\nDefault value : true",
           "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a8972f0c725f4196a41931560148ef17",
+          "Name": "FreeCADModule",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
           "KeepListStructure": false
@@ -343,14 +379,14 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "1;",
+      "Code": "// Change this value to select the active document\n1;",
       "Id": "f0185d525fda4b56bc7e7c705b0dc41c",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "217f38f4280849d8aab0a3abcd76d68f",
+          "Id": "6f43903267684af6973a47921d9c07ce",
           "Name": "",
-          "Description": "Value of expression at line 1",
+          "Description": "Value of expression at line 2",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -693,9 +729,19 @@
       "Id": "b5ab9f1ac8744da294cc86f84971fad5"
     },
     {
+      "Start": "2d184486abd44b87821c39c3aa4ba99c",
+      "End": "1ecddc239bd44131b12432756165dfc6",
+      "Id": "317bea3d045b4e3fb902544fc1266faf"
+    },
+    {
+      "Start": "2d184486abd44b87821c39c3aa4ba99c",
+      "End": "a8972f0c725f4196a41931560148ef17",
+      "Id": "867e0bc1742b47c5ad4d50f76476dfa4"
+    },
+    {
       "Start": "9e0e427cf69d4d88a661ac12c276030e",
       "End": "2bd8c788cef34ae3a5afe3cc2b29e568",
-      "Id": "8a7e6e6e0c4f44899519640f145b107e"
+      "Id": "c34980360b994e8bb4c13c2310bda0b5"
     },
     {
       "Start": "0e44cf228b77437f9649301c440e4838",
@@ -709,13 +755,23 @@
     },
     {
       "Start": "4015971c8aa84aeeafa779bbc23d1387",
-      "End": "2eb7a69ac82c416b89f167ebe81cbcd1",
-      "Id": "a41c3756c23c4b158c839ad6b22e0fab"
+      "End": "354cfc5d94594844a850e532743eb65e",
+      "Id": "50056025a5654a77b7749143164ad1f6"
     },
     {
       "Start": "4015971c8aa84aeeafa779bbc23d1387",
-      "End": "354cfc5d94594844a850e532743eb65e",
-      "Id": "885a56dafb8c47ceaf8e1fba2b392979"
+      "End": "824fcc52ecd0407aacb74b12b03830cd",
+      "Id": "1b9a316ef6254501a13d189c74059e14"
+    },
+    {
+      "Start": "4015971c8aa84aeeafa779bbc23d1387",
+      "End": "72c0e4b8788b4b81bebf10dc7c1f7b99",
+      "Id": "ede89edb02254710b047d2f484fdef87"
+    },
+    {
+      "Start": "4015971c8aa84aeeafa779bbc23d1387",
+      "End": "2eb7a69ac82c416b89f167ebe81cbcd1",
+      "Id": "45b64cd44da64c3e8e9ec91619bfa930"
     },
     {
       "Start": "3723b77c7c6046dd80a434be8f743394",
@@ -738,29 +794,19 @@
       "Id": "8076b486f2fa4fc083c8de7ae386b346"
     },
     {
-      "Start": "217f38f4280849d8aab0a3abcd76d68f",
+      "Start": "6f43903267684af6973a47921d9c07ce",
       "End": "70f2c6d1ceef4cf0b4ed0d7c0e1a68c1",
-      "Id": "9f99650c13714d7681c84652e42cccb8"
+      "Id": "e939564103ad4e5c8ef7d8b2462e053f"
     },
     {
       "Start": "43bc09429e674c1c86a72271107908bf",
       "End": "b92aae54d4984dc1bbfd21c7f308113c",
-      "Id": "18af5fda5c6d42eaa809b23d19c91d3a"
-    },
-    {
-      "Start": "43bc09429e674c1c86a72271107908bf",
-      "End": "72c0e4b8788b4b81bebf10dc7c1f7b99",
-      "Id": "ee6b1bc3311a46dbac360551b8b6a2b3"
-    },
-    {
-      "Start": "43bc09429e674c1c86a72271107908bf",
-      "End": "824fcc52ecd0407aacb74b12b03830cd",
-      "Id": "acab54bf07ee4e21b592ffb6dad7c570"
+      "Id": "8d34559285594c23824f8183e740e241"
     },
     {
       "Start": "43bc09429e674c1c86a72271107908bf",
       "End": "6376f41167434a28870b61162bf3e68a",
-      "Id": "7cc592793c2146e084c0470e1913c2cc"
+      "Id": "8e021374b9784882a3fc5e0fa42acc51"
     },
     {
       "Start": "f4be4bbe33ea4393a4d360a68cbd8c77",
@@ -770,7 +816,7 @@
     {
       "Start": "175feefa902f4afabcf473f33450d404",
       "End": "a30d622eb2994a7bb0dfbf0b7f441139",
-      "Id": "89f812f12456478e9e37298377e96037"
+      "Id": "7a062c17fe3a4ac0bccbb4bb81ac35d3"
     },
     {
       "Start": "867187cb91a94013becd03d6b75981ca",
@@ -798,7 +844,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2476",
+      "Version": "2.8.0.2471",
       "RunType": "Automatic",
       "RunPeriod": "1000"
     },
@@ -822,8 +868,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 610.5,
-        "Y": 322.0
+        "X": -615.92138214483475,
+        "Y": 1085.8577499696203
       },
       {
         "ShowGeometry": true,
@@ -832,8 +878,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 191.5,
-        "Y": 322.0
+        "X": -1034.9213821448348,
+        "Y": 1085.8577499696203
       },
       {
         "ShowGeometry": true,
@@ -842,8 +888,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1028.5,
-        "Y": 415.0
+        "X": -195.92138214483475,
+        "Y": 1003.8577499696203
       },
       {
         "ShowGeometry": true,
@@ -852,8 +898,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 610.5,
-        "Y": 482.0
+        "X": -615.92138214483475,
+        "Y": 975.85774996962027
       },
       {
         "ShowGeometry": true,
@@ -862,8 +908,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1025.2090036773077,
-        "Y": 602.12515236004356
+        "X": -195.92138214483475,
+        "Y": 1137.8577499696203
       },
       {
         "ShowGeometry": true,
@@ -872,8 +918,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2.2936254172373083,
-        "Y": 1091.3837876172447
+        "X": 349.66176825088655,
+        "Y": 940.64136039836126
       },
       {
         "ShowGeometry": true,
@@ -882,8 +928,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 9.31930987493206,
-        "Y": 933.4182717266965
+        "X": 354.65355234680828,
+        "Y": 1199.4750082423441
       },
       {
         "ShowGeometry": true,
@@ -892,8 +938,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -232.70637458276269,
-        "Y": 1040.6337876172447
+        "X": 82.193709748210722,
+        "Y": 754.68012216357965
       },
       {
         "ShowGeometry": true,
@@ -902,8 +948,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 356.65689783514722,
-        "Y": 1175.4912433485895
+        "X": 713.38741335269083,
+        "Y": 374.72171559120835
       },
       {
         "ShowGeometry": true,
@@ -912,8 +958,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 662.65689783514722,
-        "Y": 1214.4912433485895
+        "X": 1276.3874133526908,
+        "Y": 422.72171559120835
       },
       {
         "ShowGeometry": true,
@@ -922,8 +968,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 356.65689783514722,
-        "Y": 1283.7045766819231
+        "X": 713.38741335269083,
+        "Y": 483.36171559120828
       },
       {
         "ShowGeometry": true,
@@ -932,8 +978,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 881.7110961953299,
-        "Y": 1099.2298179804291
+        "X": 1526.5691222190733,
+        "Y": 540.81317125929593
       },
       {
         "ShowGeometry": true,
@@ -942,8 +988,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1192.71109619533,
-        "Y": 1099.2298179804291
+        "X": 1892.4255654145677,
+        "Y": 405.63983629768137
       },
       {
         "ShowGeometry": true,
@@ -952,8 +998,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 588.74134681144255,
-        "Y": 954.20945377960959
+        "X": 750.72988067782649,
+        "Y": 1668.0622615305401
       },
       {
         "ShowGeometry": true,
@@ -962,8 +1008,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 736.43870400734636,
-        "Y": 1608.6965029347971
+        "X": 884.66575154693351,
+        "Y": 1260.3808833443882
       },
       {
         "ShowGeometry": true,
@@ -972,8 +1018,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 236.45369587027233,
-        "Y": 802.02615214432672
+        "X": 421.23720024711315,
+        "Y": 1662.2466652781916
       },
       {
         "ShowGeometry": true,
@@ -982,8 +1028,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1154.830923837771,
-        "Y": 1607.4148602704322
+        "X": 1243.3777192119846,
+        "Y": 1393.9561460695479
       },
       {
         "ShowGeometry": true,
@@ -992,8 +1038,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1174.2054574433923,
-        "Y": 1369.1050248252766
+        "X": 1898.7376706968143,
+        "Y": 621.07095721801477
       },
       {
         "ShowGeometry": true,
@@ -1002,8 +1048,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 594.80791961975,
-        "Y": 830.08950332586267
+        "X": 891.02000171402665,
+        "Y": 1046.2238236321086
       },
       {
         "ShowGeometry": true,
@@ -1012,8 +1058,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 57.6271263915273,
-        "Y": 1520.55614460153
+        "X": -471.1068652462111,
+        "Y": 1596.8566921646884
       },
       {
         "ShowGeometry": true,
@@ -1022,13 +1068,153 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -235.741326126513,
-        "Y": 1523.19108307349
+        "X": -764.47531776425149,
+        "Y": 1599.4916306366486
       }
     ],
-    "Annotations": [],
-    "X": 615.20195706237291,
-    "Y": -49.839797560942657,
-    "Zoom": 0.59777487894692549
+    "Annotations": [
+      {
+        "Id": "84dd8995fad148848ca5b452955a2357",
+        "Title": "Initialize FreeCAD, open or create new document",
+        "Nodes": [
+          "cad81835f70443e1b82e25c807e255b8",
+          "19ffb4b0dc684070b3d9441f4f83f5ca",
+          "ca7e929fee13417bae7235dbd730ba63",
+          "7181914d94a644f38335bd8093f2dc42",
+          "d6f4aeef2b5d4082ba04eb833a666e1f"
+        ],
+        "Left": -1044.9213821448348,
+        "Top": 922.85774996962027,
+        "Width": 1193.0,
+        "Height": 360.0,
+        "FontSize": 36.0,
+        "InitialTop": 975.85774996962027,
+        "InitialHeight": 455.125152360044,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "fb47945180a04feba0e03d913068c51b",
+        "Title": "List Documents",
+        "Nodes": [
+          "c119cbd79c3e43b583d96b2e9a3c3c22",
+          "bb0e56bdb0df4d7f8761e9f26125878c"
+        ],
+        "Left": 339.66176825088655,
+        "Top": 887.64136039836126,
+        "Width": 360.0,
+        "Height": 430.83364784398282,
+        "FontSize": 36.0,
+        "InitialTop": 940.64136039836126,
+        "InitialHeight": 403.92001268169088,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "407e4ccfeefa43aca8701071ebe49e55",
+        "Title": "Change this to reload the graph in automatic mode",
+        "Nodes": [
+          "46c1a48b4e354018952bc6fa0b21e1e8"
+        ],
+        "Left": 72.193709748210722,
+        "Top": 485.68012216357965,
+        "Width": 168.85666666666668,
+        "Height": 337.0,
+        "FontSize": 36.0,
+        "InitialTop": 754.68012216357965,
+        "InitialHeight": 98.0,
+        "TextblockHeight": 259.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "7b5638a018d94b56b7727b53a7f951d7",
+        "Title": "Select an opened document",
+        "Nodes": [
+          "12303ce8cb8b49b49a1db7a5c34b4686",
+          "afc806ba8e9c4e83814d754800e5d5be",
+          "f0185d525fda4b56bc7e7c705b0dc41c",
+          "6c48afcd9a2b43ff8ef4f8857c94243d"
+        ],
+        "Left": 703.38741335269083,
+        "Top": 321.72171559120835,
+        "Width": 1044.1817088663825,
+        "Height": 338.09145566808758,
+        "FontSize": 36.0,
+        "InitialTop": 374.72171559120835,
+        "InitialHeight": 345.05383473166808,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "50adb5e9921f49979c42fecc17800052",
+        "Title": "The name of the document",
+        "Nodes": [
+          "ef3e739a7e38447699b371d214252508"
+        ],
+        "Left": 881.02000171402665,
+        "Top": 950.22382363210863,
+        "Width": 289.0,
+        "Height": 189.0,
+        "FontSize": 36.0,
+        "InitialTop": 1046.2238236321086,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 86.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1335730c78ed4ba382d0e2b1fb081a91",
+        "Title": "Save document to the same path",
+        "Nodes": [
+          "e83dab1f1881429ca788c0ef85a404b1",
+          "b94566a2dd744462bf58acc666c61f36"
+        ],
+        "Left": 874.66575154693351,
+        "Top": 1207.3808833443882,
+        "Width": 719.71196766505113,
+        "Height": 305.57526272515975,
+        "FontSize": 36.0,
+        "InitialTop": 1260.3808833443882,
+        "InitialHeight": 156.74935593396322,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3ce54992d0154aeeaddb5b21304b05aa",
+        "Title": "Close all open documents",
+        "Nodes": [
+          "b9bfb5dfe6704d858c116baaecfc81fa",
+          "9a0e8602a5e34695a704542ed979598c"
+        ],
+        "Left": -774.47531776425149,
+        "Top": 1543.8566921646884,
+        "Width": 498.36845251804039,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": 1596.8566921646884,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e7708f6e22b14cbda668aa3b0a59e421",
+        "Title": "Save document to a new path",
+        "Nodes": [
+          "803392f956fe44b59f293a30fe14d66a",
+          "7317a41936ff42cd9390d0d637b491e7"
+        ],
+        "Left": 411.23720024711315,
+        "Top": 1609.2466652781916,
+        "Width": 690.49268043071334,
+        "Height": 177.81559625234854,
+        "FontSize": 36.0,
+        "InitialTop": 1662.2466652781916,
+        "InitialHeight": 154.81559625234854,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 339.24167937187264,
+    "Y": 85.1749893237469,
+    "Zoom": 0.52231668014679578
   }
 }
