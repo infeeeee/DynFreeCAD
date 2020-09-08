@@ -22,7 +22,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\n\r\nFreeCAD.setActiveDocument(doc.Name)\r\n\r\n\r\nad = FreeCAD.ActiveDocument\r\n\r\n\r\nOUT = ad",
+      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\n\r\nFreeCAD.setActiveDocument(doc.Name)\r\n\r\nad = FreeCAD.ActiveDocument\r\n\r\nOUT = ad",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "2ea8fdab1d10422a8a4e0496c03eb074",
@@ -119,7 +119,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.8.0.2327",
+      "Version": "2.9.0.2476",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },

@@ -1,51 +1,34 @@
 {
-  "Uuid": "ef82351e-0aad-48f4-85cf-8ca0b314bbc5",
+  "Uuid": "fb45d725-7bb6-4605-a746-aeba02fa0c7b",
   "IsCustomNode": true,
   "Category": "DynFreeCAD.Document",
-  "Description": "Close all open FreeCAD documents",
-  "Name": "CloseAllDocuments",
+  "Description": "Get active FreeCAD document",
+  "Name": "ActiveDocument",
   "ElementResolver": {
-    "ResolutionMap": {}
+    "ResolutionMap": {
+      "FileSystem": {
+        "Key": "DSCore.IO.FileSystem",
+        "Value": "DSCoreNodes.dll"
+      },
+      "String": {
+        "Key": "DSCore.String",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
   },
   "Inputs": [],
   "Outputs": [],
   "Nodes": [
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
-      "NodeType": "InputNode",
-      "Parameter": {
-        "Name": "run",
-        "TypeName": "bool",
-        "TypeRank": 0,
-        "DefaultValue": "true",
-        "Description": ""
-      },
-      "Id": "e4ec26a4807348e59dd8946fda6d65e3",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "4b1e0832f5b0417fae65e9f7a25ac27a",
-          "Name": "",
-          "Description": "Symbol",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
-    },
-    {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\nlist_docs_dict = FreeCAD.listDocuments()\r\nlist_docs = []\r\n\r\n\r\nfor key in list_docs_dict:\r\n\tFreeCAD.closeDocument(key)\r\n\r\nOUT = True",
+      "Code": "import FreeCAD\r\n\r\nad = FreeCAD.ActiveDocument\r\n\r\nOUT = ad",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "1ac0812064314943bf4aa5fb6e80eb09",
+      "Id": "1f775ceaf24c411f8d218897d3f9292b",
       "Inputs": [
         {
-          "Id": "4da0521eb21b45d8a5f443b72c2f2c45",
+          "Id": "8198661e342948dd8ff294031d151cb7",
           "Name": "IN[0]",
           "Description": "Input #0",
           "UsingDefaultValue": false,
@@ -56,7 +39,7 @@
       ],
       "Outputs": [
         {
-          "Id": "6ae293865c6749deadcc5bfffafb297e",
+          "Id": "c923530ac10a4710af96a00276598b4e",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -69,14 +52,40 @@
       "Description": "Runs an embedded Python script."
     },
     {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "reload",
+        "TypeName": "bool",
+        "TypeRank": 0,
+        "DefaultValue": "true",
+        "Description": ""
+      },
+      "Id": "057645a9f5c3444faaaba1d5382b9c64",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1cd4ab61b66b4d408acbf0edc0efc530",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "success",
-      "Id": "baabf871e6da4310b4a39eb5385d9543",
+      "Symbol": "FreeCADDocument",
+      "Id": "9396a8d4589244169172e8befb1bb3a7",
       "Inputs": [
         {
-          "Id": "ec754af3178f4bd0ab6585d355020211",
+          "Id": "816b19ddbad34e32987d11a5bccefc77",
           "Name": "",
           "Description": "",
           "UsingDefaultValue": false,
@@ -92,14 +101,14 @@
   ],
   "Connectors": [
     {
-      "Start": "4b1e0832f5b0417fae65e9f7a25ac27a",
-      "End": "4da0521eb21b45d8a5f443b72c2f2c45",
-      "Id": "3eac2ae42c884afabe4b67992f5a730d"
+      "Start": "c923530ac10a4710af96a00276598b4e",
+      "End": "816b19ddbad34e32987d11a5bccefc77",
+      "Id": "cc252127b61c45a3b114b1394e6cbff5"
     },
     {
-      "Start": "6ae293865c6749deadcc5bfffafb297e",
-      "End": "ec754af3178f4bd0ab6585d355020211",
-      "Id": "00f32440a41c4ab994b8a682024829a7"
+      "Start": "1cd4ab61b66b4d408acbf0edc0efc530",
+      "End": "8198661e342948dd8ff294031d151cb7",
+      "Id": "ff70bdd3d4014f9ba786989ff92a4e72"
     }
   ],
   "Dependencies": [],
@@ -110,7 +119,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.8.0.2327",
+      "Version": "2.9.0.2476",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -129,38 +138,38 @@
     "NodeViews": [
       {
         "ShowGeometry": true,
-        "Name": "Input",
-        "Id": "e4ec26a4807348e59dd8946fda6d65e3",
+        "Name": "Python Script",
+        "Id": "1f775ceaf24c411f8d218897d3f9292b",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 83.0,
-        "Y": 467.0
+        "X": 376.0,
+        "Y": 383.0
       },
       {
         "ShowGeometry": true,
-        "Name": "Python Script",
-        "Id": "1ac0812064314943bf4aa5fb6e80eb09",
+        "Name": "Input",
+        "Id": "057645a9f5c3444faaaba1d5382b9c64",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 469.237388724036,
-        "Y": 481.216617210683
+        "X": -6.0,
+        "Y": 381.0
       },
       {
         "ShowGeometry": true,
         "Name": "Output",
-        "Id": "baabf871e6da4310b4a39eb5385d9543",
+        "Id": "9396a8d4589244169172e8befb1bb3a7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 770.0,
-        "Y": 513.0
+        "X": 649.0,
+        "Y": 406.0
       }
     ],
     "Annotations": [],
-    "X": 0.0,
-    "Y": 0.0,
+    "X": 192.0,
+    "Y": 69.0,
     "Zoom": 1.0
   }
 }

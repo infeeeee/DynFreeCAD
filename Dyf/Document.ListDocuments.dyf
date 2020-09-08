@@ -60,7 +60,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "FreeCAD = IN[1]\r\n\r\nlist_docs_dict = FreeCAD.listDocuments()\r\n\r\nOUT = list_docs_dict",
+      "Code": "import FreeCAD\r\n\r\nlist_docs_dict = FreeCAD.listDocuments()\r\n\r\nOUT = list_docs_dict",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "d9c0232daea3466ba57ede61e6623fb4",
@@ -69,15 +69,6 @@
           "Id": "0ee4a00b836a4ccc9d52e0935cf0fa84",
           "Name": "IN[0]",
           "Description": "Input #0",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "73c8aadfcd964c74bd011b60d81f32f6",
-          "Name": "IN[1]",
-          "Description": "Input #1",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -97,32 +88,6 @@
       ],
       "Replication": "Disabled",
       "Description": "Runs an embedded Python script."
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
-      "NodeType": "InputNode",
-      "Parameter": {
-        "Name": "FreeCADModule",
-        "TypeName": "var",
-        "TypeRank": -1,
-        "DefaultValue": null,
-        "Description": ""
-      },
-      "Id": "cc19452577b34fc9a524c68f654a8efe",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "c22851b3d27f4314bbc0ecb71d8f43c4",
-          "Name": "",
-          "Description": "Symbol",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
@@ -135,11 +100,6 @@
       "Start": "8949dcc630544430a641546f9b857b88",
       "End": "a62b4dec0aed476ba9a54d542a2c022b",
       "Id": "0195b213abb24c7bbc27427a6de7b6c7"
-    },
-    {
-      "Start": "c22851b3d27f4314bbc0ecb71d8f43c4",
-      "End": "73c8aadfcd964c74bd011b60d81f32f6",
-      "Id": "3465987be8844a22a10df1c961e2c6e8"
     }
   ],
   "Dependencies": [],
@@ -150,15 +110,15 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.8.0.2471",
+      "Version": "2.9.0.2476",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -8.8140373229980469,
-      "EyeY": 74.791996002197266,
-      "EyeZ": 40.309284210205078,
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
       "LookX": 12.0,
       "LookY": -13.0,
       "LookZ": -58.0,
@@ -196,16 +156,6 @@
         "Excluded": false,
         "X": 919.5,
         "Y": 798.5
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Input",
-        "Id": "cc19452577b34fc9a524c68f654a8efe",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 570.5,
-        "Y": 853.5
       }
     ],
     "Annotations": [],

@@ -1,0 +1,520 @@
+{
+  "Uuid": "5f28e12e-f081-4185-a37f-d2f39d275382",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "UseTheApi",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "dc0f1d3d-4fa1-498d-81c1-7b76158efb03",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "bea4c82613b544798ee5f2b841ee2a85",
+      "Inputs": [
+        {
+          "Id": "40e83c39d42249eead41253d40831871",
+          "Name": "name",
+          "Description": "string\nDefault value : None",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "588e33f3c1a44fa4a0b09e3d9b9f8d74",
+          "Name": "FreeCADBinPath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0d41dff8534247a68ba42aa80d52d779",
+          "Name": "sysPaths",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35c09c6f790148cb920935c69efa2b21",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6b3abf49e0dc468cbdb852d62fd6d6f1",
+          "Name": "FreeCADversion",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create new document in FreeCAD"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "InputValue": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "NodeType": "ExtensionNode",
+      "Id": "ec8f3c35d6d744aa9b0643992794290a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "71cd4d16e6e04bbaa4e91ddf685944f8",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import FreeCAD\r\nimport Part\r\n\r\ndoc = IN[0]\r\nline = IN[1]\r\n\r\nl=Part.LineSegment()\r\nl.StartPoint=(line.StartPoint.X,line.StartPoint.Y,0.0)\r\nl.EndPoint=(line.EndPoint.X,line.EndPoint.Y,0.0)\r\n\r\ndoc.addObject(\"Part::Feature\",\"Line\").Shape=l.toShape()\r\n\r\nOUT = doc",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "e0865df7f6d34590b2dfe14e9403a463",
+      "Inputs": [
+        {
+          "Id": "29d7830bb19f42528142ac14d296552d",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "336b04792c074efb98bd55a05db96ea4",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "903ec54c69464527a46a597c56a6e851",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "c7c797dc401444e69ebc057003f91c00",
+      "Inputs": [
+        {
+          "Id": "637c01e117b84777b2daa40c25521a20",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f32a0ca3304f43afab76270dfdfec4db",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "71f5359a718f4a6981c7691a23172fd8",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3a2e22204db04b0eb9daf6bf1908d5bf",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "a0be17b89c2740819df4b007e49c750f",
+      "Inputs": [
+        {
+          "Id": "fd941d657e7d4f87b368fffcc0253a08",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bcebcaaff1a44f3ab3ff928bc038bbba",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "678135066695426c8c832bda4f3f40ca",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "854cc066b5a9475eb137b29a298f085f",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "10;",
+      "Id": "bb3857c942f44ff9a5170c41bb18c751",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "58728682ef2942e68550eb8996325743",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "7fd1aa2059fa470f84ba75cdc2dbd222",
+      "Inputs": [
+        {
+          "Id": "a9d733875d8e422b95d94ad3fe0dedda",
+          "Name": "startPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ff5ebcb1bf5f4361b42924c859732609",
+          "Name": "endPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "84f528af8b224d43ba2e5b6bf6e531b9",
+          "Name": "Line",
+          "Description": "Line",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a straight Line between two input Points.\n\nLine.ByStartPointEndPoint (startPoint: Point, endPoint: Point): Line"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "12e69d96-5464-43a5-9da1-6e490716001d",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "f9fc842b289b4247a7e83ece8359e612",
+      "Inputs": [
+        {
+          "Id": "ad5161e50e6645eda2abd66db78ae1a8",
+          "Name": "path",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0c685bccd45a4a118f60927ef601a4cc",
+          "Name": "FreeCADDocument",
+          "Description": "Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d38ba646e4b448bd8162fb0ab1e7abd3",
+          "Name": "FreeCADDocument",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Save FreeCAD document to a path"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "E:\\Dynamoline.FCStd",
+      "InputValue": "E:\\Dynamoline.FCStd",
+      "NodeType": "ExtensionNode",
+      "Id": "12397b2bb2df4f4b882eb962778a6eea",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "697b94452ce24e10b0c0dc118590a6bb",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "35c09c6f790148cb920935c69efa2b21",
+      "End": "29d7830bb19f42528142ac14d296552d",
+      "Id": "b0033160dba444d3b0a9ce1e88167b98"
+    },
+    {
+      "Start": "71cd4d16e6e04bbaa4e91ddf685944f8",
+      "End": "588e33f3c1a44fa4a0b09e3d9b9f8d74",
+      "Id": "f4673d6c8f1c42b1a52eb4ccb81147a4"
+    },
+    {
+      "Start": "903ec54c69464527a46a597c56a6e851",
+      "End": "0c685bccd45a4a118f60927ef601a4cc",
+      "Id": "3f0f3c2447e8409a9ea0da247bd7b04c"
+    },
+    {
+      "Start": "3a2e22204db04b0eb9daf6bf1908d5bf",
+      "End": "a9d733875d8e422b95d94ad3fe0dedda",
+      "Id": "bdd264ffbf614f3bb8f0acd397466fb5"
+    },
+    {
+      "Start": "854cc066b5a9475eb137b29a298f085f",
+      "End": "ff5ebcb1bf5f4361b42924c859732609",
+      "Id": "3cac8a45f14f4f54b88b4bafee79c38d"
+    },
+    {
+      "Start": "58728682ef2942e68550eb8996325743",
+      "End": "fd941d657e7d4f87b368fffcc0253a08",
+      "Id": "6ddd84e1538d4e2b99b3215110e047c4"
+    },
+    {
+      "Start": "58728682ef2942e68550eb8996325743",
+      "End": "bcebcaaff1a44f3ab3ff928bc038bbba",
+      "Id": "c91df314076a4cdb9a6eef46906c829b"
+    },
+    {
+      "Start": "84f528af8b224d43ba2e5b6bf6e531b9",
+      "End": "336b04792c074efb98bd55a05db96ea4",
+      "Id": "b8b23d92f068416fa84fd70af9cdef55"
+    },
+    {
+      "Start": "697b94452ce24e10b0c0dc118590a6bb",
+      "End": "ad5161e50e6645eda2abd66db78ae1a8",
+      "Id": "124e88be7e6243269853ac77fbdf3803"
+    }
+  ],
+  "Dependencies": [
+    "dc0f1d3d-4fa1-498d-81c1-7b76158efb03",
+    "12e69d96-5464-43a5-9da1-6e490716001d"
+  ],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.9.0.2476",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 22.621225357055664,
+      "EyeY": 14.080301284790039,
+      "EyeZ": 46.588848114013672,
+      "LookX": -25.82097053527832,
+      "LookY": 5.4120502471923828,
+      "LookZ": -54.598430633544922,
+      "UpX": 0.12855936586856842,
+      "UpY": 0.95371711254119873,
+      "UpZ": 0.27183881402015686
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "NewDocument",
+        "Id": "bea4c82613b544798ee5f2b841ee2a85",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1127.094085297156,
+        "Y": 670.65209780567216
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "ec8f3c35d6d744aa9b0643992794290a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 620.094085297156,
+        "Y": 667.65209780567216
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "e0865df7f6d34590b2dfe14e9403a463",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1562.094085297156,
+        "Y": 749.143255493089
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "c7c797dc401444e69ebc057003f91c00",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 691.00967398856869,
+        "Y": 1013.0314985686591
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "a0be17b89c2740819df4b007e49c750f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 691.00967398856869,
+        "Y": 1174.0314985686591
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bb3857c942f44ff9a5170c41bb18c751",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 506.00967398856869,
+        "Y": 1191.2448319019923
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Line.ByStartPointEndPoint",
+        "Id": "7fd1aa2059fa470f84ba75cdc2dbd222",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 941.50648084941622,
+        "Y": 1091.6818178825743
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SaveAs",
+        "Id": "f9fc842b289b4247a7e83ece8359e612",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1789.1157837540661,
+        "Y": 676.16294703412711
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "12397b2bb2df4f4b882eb962778a6eea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1562.094085297156,
+        "Y": 640.65209780567216
+      }
+    ],
+    "Annotations": [],
+    "X": 10.591007597140674,
+    "Y": -207.18181611307659,
+    "Zoom": 0.77051684820224509
+  }
+}

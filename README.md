@@ -10,7 +10,7 @@ Dynamo nodes for the FreeCAD API
 
 - FreeCAD built with python 3.8.
   
-  - Download a prebuilt from here (0.19): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8)
+  - Download a prebuilt from here (0.19): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8) The 'site_packages1' version works better.
   
   - You can build yourself a different verision, follow FreeCAD's doumentation
 
@@ -43,19 +43,21 @@ Table updated: 2020-09-07
 
 ## Usage and tips
 
-⚠️ **As DynFreeCAD is under developement, it's possible that some screenshots are outdated** ⚠️
+⚠️ **As DynFreeCAD is under developement, it's possible that some screenshots and documentation are outdated** ⚠️
 
-See `Examples` folder for some documents.
+Detailed documentation is in the [wiki]([https://github.com/infeeeee/DynFreeCAD/wiki). 
 
-### Initialize FreeCAD and open or create a new document
+See `Examples` folder for some Dynamo documents.
 
-Always start with these node. Add the path to the `bin` folder of FreeCAD. Connect the FreeCADModule ports!
+### Open or create a new document
+
+Always start with these nodes. Add the path to the `bin` folder of FreeCAD.
 
 ![Initialize and open a document](Screenshots/Initialize+open.png)
 
 ### Manage documents
 
-It's pretty straightforward how you have to manage documents with these nodes. For the `Refresh` and `Run` ports connect a boolean to update or run them. See `ManageDocuments.dyn` in the Examples folder.
+Use the ouput of the OpenDocument or CreateDocument nodes output if you just work on one document. The bottom nodes just showing how these nodes are connectable. 
 
 ![Documents](Screenshots/Documents.png)
 
@@ -65,8 +67,8 @@ It's pretty straightforward how you have to manage documents with these nodes. F
 
 ### Python script
 
-You can use the FreeCAD API in Python Script this way:
+You can use the FreeCAD API in a Python Script this way:
 
-![Create Line](Screenshots/CreateLine.png)
+![Api](Screenshots/Api.png)
 
-This creates a line from a dynamo line in FreeCAD, than saves the document.
+See UseTheApi.dyn in Examples folder.

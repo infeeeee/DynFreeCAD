@@ -1,7 +1,7 @@
 {
   "Uuid": "b6f61a59-8b98-40a9-9857-4ecf4fde6c00",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.App",
+  "Category": "DynFreeCAD.WIP",
   "Description": "⚠ WIP! NOT WORKING YET! ⚠\r\n\r\nStart FreeCAD with Gui",
   "Name": "InitializeWithGui",
   "ElementResolver": {
@@ -319,7 +319,6 @@
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
@@ -349,8 +348,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -488.0,
-        "Y": -78.286666666666662
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -359,8 +358,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -145.0,
-        "Y": -3.2866666666666617
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -369,8 +368,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 79.0,
-        "Y": 0.92666666666666941
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -379,8 +378,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 290.0,
-        "Y": 47.5
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -389,8 +388,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 543.0,
-        "Y": -36.5
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -399,8 +398,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 543.0,
-        "Y": 47.5
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -409,8 +408,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 436.0,
-        "Y": 194.0
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -419,8 +418,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -614.0,
-        "Y": 61.713333333333338
+        "X": 0.0,
+        "Y": 0.0
       },
       {
         "ShowGeometry": true,
@@ -429,13 +428,13 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 381.0,
-        "Y": 408.0
+        "X": 0.0,
+        "Y": 0.0
       }
     ],
     "Annotations": [],
-    "X": 556.0,
-    "Y": 474.0,
+    "X": 0.0,
+    "Y": 0.0,
     "Zoom": 1.0
   }
 }
