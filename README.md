@@ -1,4 +1,4 @@
-# DynFreeCAD
+# ![](https://raw.githubusercontent.com/infeeeee/DynFreeCAD/master/Logo/DynFreeCAD_256.png) DynFreeCAD
 
 Dynamo nodes for the FreeCAD API
 
