@@ -1,7 +1,7 @@
 {
   "Uuid": "fb45d725-7bb6-4605-a746-aeba02fa0c7b",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Document",
+  "Category": "DynFreeCAD.Document.Manage",
   "Description": "Get active FreeCAD document",
   "Name": "ActiveDocument",
   "ElementResolver": {
@@ -113,13 +113,12 @@
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2476",
+      "Version": "2.9.0.2536",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -137,39 +136,39 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
-        "Name": "Python Script",
         "Id": "1f775ceaf24c411f8d218897d3f9292b",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 376.0,
-        "Y": 383.0
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "057645a9f5c3444faaaba1d5382b9c64",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": -6.0,
-        "Y": 381.0
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "9396a8d4589244169172e8befb1bb3a7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 649.0,
-        "Y": 406.0
+        "X": 0.0,
+        "Y": 0.0
       }
     ],
     "Annotations": [],
-    "X": 192.0,
-    "Y": 69.0,
+    "X": 0.0,
+    "Y": 0.0,
     "Zoom": 1.0
   }
 }

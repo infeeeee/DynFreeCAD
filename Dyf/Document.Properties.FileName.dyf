@@ -1,9 +1,9 @@
 {
-  "Uuid": "be51e45e-ac85-470b-a579-6527b7586693",
+  "Uuid": "e9b0a944-782a-4769-9cd8-6942aebd6ba1",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Document",
-  "Description": "Returns the name of a FreeCAD document",
-  "Name": "Name",
+  "Category": "DynFreeCAD.Document.Properties",
+  "Description": "Full path including filename of a FreeCAD document",
+  "Name": "FileName",
   "ElementResolver": {
     "ResolutionMap": {
       "System.Object": {
@@ -18,13 +18,13 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\n\r\nOUT= doc.Name\r\n",
+      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\nfn = doc.FileName\r\n\r\nOUT = fn",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "9f6c0f3c77244569b518e762a4aee8f9",
+      "Id": "1933609625524f59bb1848751fcf5516",
       "Inputs": [
         {
-          "Id": "be9dd7a0dff44898871cc178ed8eb9b9",
+          "Id": "31ca2443d216458497cb8d959eba4ad8",
           "Name": "IN[0]",
           "Description": "Input #0",
           "UsingDefaultValue": false,
@@ -35,7 +35,7 @@
       ],
       "Outputs": [
         {
-          "Id": "269baf5820d649f0920a8cc361ccfc6d",
+          "Id": "09934daf4b8d40cc901be3d48c187c04",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -57,11 +57,11 @@
         "DefaultValue": null,
         "Description": ""
       },
-      "Id": "44c7d42bee3040ce81afecd0874da63c",
+      "Id": "da060bd5731f452581981856113d72b7",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "fbfd95fb75704f45a30eae15c05940c6",
+          "Id": "5381bdd4543840cbbaf146f67bb26a74",
           "Name": "",
           "Description": "Symbol",
           "UsingDefaultValue": false,
@@ -77,11 +77,11 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "string",
-      "Id": "0646f0706dbf4d6ab5541c273dc5002a",
+      "Symbol": "filePath: string",
+      "Id": "165432bc527d4e869ffdfd8b02c329dd",
       "Inputs": [
         {
-          "Id": "d4aebf4d2f18422e9c8fd1aa39286c49",
+          "Id": "6759a85eac3145d4b38a1e6fbd788db2",
           "Name": "",
           "Description": "",
           "UsingDefaultValue": false,
@@ -97,25 +97,24 @@
   ],
   "Connectors": [
     {
-      "Start": "269baf5820d649f0920a8cc361ccfc6d",
-      "End": "d4aebf4d2f18422e9c8fd1aa39286c49",
-      "Id": "f75b32b992c04094891a7bb517cd3a49"
+      "Start": "09934daf4b8d40cc901be3d48c187c04",
+      "End": "6759a85eac3145d4b38a1e6fbd788db2",
+      "Id": "7c4fcb98bbcb47739125ea82887ff6f6"
     },
     {
-      "Start": "fbfd95fb75704f45a30eae15c05940c6",
-      "End": "be9dd7a0dff44898871cc178ed8eb9b9",
-      "Id": "f0f36b8978c64ec1afc8c8311922aefa"
+      "Start": "5381bdd4543840cbbaf146f67bb26a74",
+      "End": "31ca2443d216458497cb8d959eba4ad8",
+      "Id": "d56c0758237341848a813d27a9a5cbb2"
     }
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.8.0.2327",
+      "Version": "2.9.0.2536",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -133,34 +132,34 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
+        "Id": "1933609625524f59bb1848751fcf5516",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
         "Name": "Python Script",
-        "Id": "9f6c0f3c77244569b518e762a4aee8f9",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 533.0,
-        "Y": 437.0
+        "X": 509.0,
+        "Y": 646.0
       },
       {
-        "ShowGeometry": true,
+        "Id": "da060bd5731f452581981856113d72b7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
         "Name": "Input",
-        "Id": "44c7d42bee3040ce81afecd0874da63c",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 24.0,
-        "Y": 453.0
+        "X": 34.0,
+        "Y": 626.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
-        "Id": "0646f0706dbf4d6ab5541c273dc5002a",
+        "Id": "165432bc527d4e869ffdfd8b02c329dd",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 856.0,
-        "Y": 479.0
+        "X": 905.0,
+        "Y": 694.0
       }
     ],
     "Annotations": [],

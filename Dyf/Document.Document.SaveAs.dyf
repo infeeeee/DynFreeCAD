@@ -1,7 +1,7 @@
 {
   "Uuid": "12e69d96-5464-43a5-9da1-6e490716001d",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Document",
+  "Category": "DynFreeCAD.Document.Document",
   "Description": "Save FreeCAD document to a path",
   "Name": "SaveAs",
   "ElementResolver": {
@@ -149,68 +149,67 @@
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2476",
+      "Version": "2.9.0.2536",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -9.0880985260009766,
-      "EyeY": 68.4641342163086,
-      "EyeZ": 10.925186157226563,
-      "LookX": 4.0880985260009766,
-      "LookY": -57.464134216308594,
-      "LookZ": -18.925186157226563,
-      "UpX": 0.18098533153533936,
-      "UpY": 0.51503783464431763,
-      "UpZ": -0.83784276247024536
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "6d7a607aba5c40879ee01d5972cdef7c",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 211.0,
-        "Y": 542.0
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Python Script",
         "Id": "4ec9ca83a65b40fd9dfa42910b86f18a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 500.0,
-        "Y": 515.5
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "7d8587c3e8144b04a1c0bfa749122671",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 828.0,
-        "Y": 558.5
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "06e66cb80ae1466bb5e84c4aff065653",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 77.0,
-        "Y": 687.0
+        "X": 0.0,
+        "Y": 0.0
       }
     ],
     "Annotations": [],

@@ -1,11 +1,16 @@
 {
-  "Uuid": "c6eea3dc-6d88-4172-9fe6-b31931b23f8e",
+  "Uuid": "c34e2114-4877-4045-89ce-aa9a521a2840",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Document",
-  "Description": "List all open FreeCAD documents",
-  "Name": "ListDocuments",
+  "Category": "DynFreeCAD.Document.Manage",
+  "Description": "Recompute a FreeCAD Document",
+  "Name": "Recompute",
   "ElementResolver": {
-    "ResolutionMap": {}
+    "ResolutionMap": {
+      "System.Object": {
+        "Key": "System.Object",
+        "Value": null
+      }
+    }
   },
   "Inputs": [],
   "Outputs": [],
@@ -14,17 +19,17 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "reload",
-        "TypeName": "bool",
+        "Name": "FreeCADDocument",
+        "TypeName": "System.Object",
         "TypeRank": 0,
-        "DefaultValue": "true",
+        "DefaultValue": null,
         "Description": ""
       },
-      "Id": "31e06181921c48369c48dc2e88d708de",
+      "Id": "cfa0adc13e7546c2a1cd42b8c1e56ddd",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "fd1863d3e9574dbe907a4e7b24d52cf1",
+          "Id": "f109fb2f2f1b451191caf5b781c51e65",
           "Name": "",
           "Description": "Symbol",
           "UsingDefaultValue": false,
@@ -40,11 +45,11 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "FreeCADDocuments",
-      "Id": "79fd783731f64dec83c26dfd058cd891",
+      "Symbol": "FreeCADDocument: System.Object",
+      "Id": "05f3d8565e8b45a58e8eda9aae3a8437",
       "Inputs": [
         {
-          "Id": "a62b4dec0aed476ba9a54d542a2c022b",
+          "Id": "1e0dea2543e247909dc4c8dadbbb5019",
           "Name": "",
           "Description": "",
           "UsingDefaultValue": false,
@@ -60,13 +65,13 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\nlist_docs_dict = FreeCAD.listDocuments()\r\n\r\nOUT = list_docs_dict",
+      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\n\r\ndoc.recompute()\r\n\r\nOUT = doc",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "d9c0232daea3466ba57ede61e6623fb4",
+      "Id": "894ab7f97d77487d82df84be147d6129",
       "Inputs": [
         {
-          "Id": "0ee4a00b836a4ccc9d52e0935cf0fa84",
+          "Id": "ec5e9ef2ea7e4cfcaa97a8ea54005915",
           "Name": "IN[0]",
           "Description": "Input #0",
           "UsingDefaultValue": false,
@@ -77,7 +82,7 @@
       ],
       "Outputs": [
         {
-          "Id": "8949dcc630544430a641546f9b857b88",
+          "Id": "6142ec351327435a8694b6a30a63c69b",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -92,25 +97,24 @@
   ],
   "Connectors": [
     {
-      "Start": "fd1863d3e9574dbe907a4e7b24d52cf1",
-      "End": "0ee4a00b836a4ccc9d52e0935cf0fa84",
-      "Id": "5af955295dd944b6b08e5c0d43cad7bc"
+      "Start": "f109fb2f2f1b451191caf5b781c51e65",
+      "End": "ec5e9ef2ea7e4cfcaa97a8ea54005915",
+      "Id": "a7074ffa0a3b4ad7916a4684fb7ed8f5"
     },
     {
-      "Start": "8949dcc630544430a641546f9b857b88",
-      "End": "a62b4dec0aed476ba9a54d542a2c022b",
-      "Id": "0195b213abb24c7bbc27427a6de7b6c7"
+      "Start": "6142ec351327435a8694b6a30a63c69b",
+      "End": "1e0dea2543e247909dc4c8dadbbb5019",
+      "Id": "189ac7bad3f54eb0bf934e256dd7ae8b"
     }
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2476",
+      "Version": "2.9.0.2536",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -128,39 +132,39 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
+        "Id": "cfa0adc13e7546c2a1cd42b8c1e56ddd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
         "Name": "Input",
-        "Id": "31e06181921c48369c48dc2e88d708de",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 570.5,
-        "Y": 769.5
+        "X": 156.0,
+        "Y": 406.0
       },
       {
-        "ShowGeometry": true,
+        "Id": "05f3d8565e8b45a58e8eda9aae3a8437",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
         "Name": "Output",
-        "Id": "79fd783731f64dec83c26dfd058cd891",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1143.5,
-        "Y": 798.5
+        "X": 762.0,
+        "Y": 406.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Python Script",
-        "Id": "d9c0232daea3466ba57ede61e6623fb4",
+        "Id": "894ab7f97d77487d82df84be147d6129",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 919.5,
-        "Y": 798.5
+        "X": 538.0,
+        "Y": 406.0
       }
     ],
     "Annotations": [],
-    "X": -366.0,
-    "Y": -223.0,
+    "X": 0.0,
+    "Y": 0.0,
     "Zoom": 1.0
   }
 }

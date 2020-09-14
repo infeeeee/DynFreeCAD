@@ -1,7 +1,7 @@
 {
   "Uuid": "dc0f1d3d-4fa1-498d-81c1-7b76158efb03",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Document",
+  "Category": "DynFreeCAD.Document.Document",
   "Description": "Create new document in FreeCAD",
   "Name": "NewDocument",
   "ElementResolver": {
@@ -284,13 +284,12 @@
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
-  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2476",
+      "Version": "2.9.0.2536",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -308,89 +307,89 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "71ac5269790d469bbecba581316468bf",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 670.47926744986694,
-        "Y": 861.1154118517677
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Python Script",
         "Id": "60e4a955122e4deeac0166194a00cd31",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1002.4792674498669,
-        "Y": 806.1154118517677
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "7c18eb9be68e4037be49e8404a66aef7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 670.47926744986694,
-        "Y": 777.1154118517677
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Code Block",
         "Id": "be9b571526cb4fd4bce522572f25f8e7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1226.4792674498669,
-        "Y": 810.32874518510107
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "List.UniqueItems",
         "Id": "8a85cd11cbb84dde87086252f4ef0dd4",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "List.UniqueItems",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1437.4792674498669,
-        "Y": 906.68874518510108
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "bb935a994ba14a2395db8c7b80dcdde0",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1690.4792674498669,
-        "Y": 906.68874518510108
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "4af33c89eed1470cb195559b97072788",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1690.4792674498669,
-        "Y": 740.68874518510108
+        "X": 0.0,
+        "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "cea0317c131a4ee08664052189ad6886",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1690.4792674498669,
-        "Y": 823.68874518510108
+        "X": 0.0,
+        "Y": 0.0
       }
     ],
     "Annotations": [],
-    "X": -482.42961662095684,
-    "Y": -540.47627853517179,
-    "Zoom": 1.2777169841077238
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
   }
 }
