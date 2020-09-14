@@ -43,8 +43,8 @@
     },
     {
       "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
-      "HintPath": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8-site_packages1\\bin",
-      "InputValue": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "HintPath": "E:\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "InputValue": "E:\\FreeCAD-conda-PY3.8-site_packages1\\bin",
       "NodeType": "ExtensionNode",
       "Id": "ec8f3c35d6d744aa9b0643992794290a",
       "Inputs": [],
@@ -96,21 +96,21 @@
     },
     "NodeViews": [
       {
+        "ShowGeometry": true,
+        "Name": "Python Script",
         "Id": "e0865df7f6d34590b2dfe14e9403a463",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Python Script",
-        "ShowGeometry": true,
         "Excluded": false,
         "X": 1212.2154095576407,
         "Y": 692.82371479767244
       },
       {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
         "Id": "ec8f3c35d6d744aa9b0643992794290a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Directory Path",
-        "ShowGeometry": true,
         "Excluded": false,
         "X": 705.21540955764056,
         "Y": 692.82371479767244
