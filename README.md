@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/infeeeee/DynFreeCAD/master/Logo/DynFreeCAD_256.png) 
 # DynFreeCAD
 
 Dynamo nodes for the FreeCAD API
@@ -74,3 +75,18 @@ You can use the FreeCAD API in a Python Script this way:
 ![Api](Screenshots/Api.png)
 
 See UseTheApi.dyn in Examples folder.
+
+## Troubleshooting
+
+If you have some problems, open an issue!
+
+You can also ask questions on the related project's forums:
+
+- [Dynamo Forum](https://forum.dynamobim.com/)
+- [FreeCAD Forum](https://forum.freecadweb.org/)
+- [OSArch Community](https://community.osarch.org/)
+
+
+## License
+
+MIT
