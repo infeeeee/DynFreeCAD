@@ -1,0 +1,124 @@
+{
+  "Uuid": "5f28e12e-f081-4185-a37f-d2f39d275382",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "ApiLoader",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import sys\r\nfreecad_bin_path=IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\nimport FreeCAD\r\n\r\n# libs:\r\nimport area\r\nimport DraftUtils\r\nimport Drawing\r\nimport Fem\r\nimport flatmesh\r\nimport Image\r\nimport Import\r\nimport Inspection\r\nimport Measure\r\nimport Mesh\r\nimport MeshPart\r\nimport Part\r\nimport Path\r\nimport PathSimulator\r\nimport Points\r\nimport Raytracing\r\nimport ReverseEngineering\r\nimport Robot\r\nimport Sketcher\r\nimport Surface\r\n\r\n#mods:\r\n#import Arch\r\n#import Draft\r\nimport Material\r\nimport OpenSCAD\r\nimport Part\r\nimport Show\r\nimport Spreadsheet\r\nimport TechDraw\r\nimport Test\r\nimport Tux",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "e0865df7f6d34590b2dfe14e9403a463",
+      "Inputs": [
+        {
+          "Id": "29d7830bb19f42528142ac14d296552d",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "903ec54c69464527a46a597c56a6e851",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "InputValue": "E:\\_PortableApps\\FreeCAD\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "NodeType": "ExtensionNode",
+      "Id": "ec8f3c35d6d744aa9b0643992794290a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d1ae4ba80a384ebeb8dac8a03b8adf55",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "d1ae4ba80a384ebeb8dac8a03b8adf55",
+      "End": "29d7830bb19f42528142ac14d296552d",
+      "Id": "43ebd590746b4d27bf273a3cd39aadf8"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.9.0.2536",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 22.621225357055664,
+      "EyeY": 14.080301284790039,
+      "EyeZ": 46.588848114013672,
+      "LookX": -25.82097053527832,
+      "LookY": 5.4120502471923828,
+      "LookZ": -54.598430633544922,
+      "UpX": 0.12855936586856842,
+      "UpY": 0.95371711254119873,
+      "UpZ": 0.27183881402015686
+    },
+    "NodeViews": [
+      {
+        "Id": "e0865df7f6d34590b2dfe14e9403a463",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1212.2154095576407,
+        "Y": 692.82371479767244
+      },
+      {
+        "Id": "ec8f3c35d6d744aa9b0643992794290a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Directory Path",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 705.21540955764056,
+        "Y": 692.82371479767244
+      }
+    ],
+    "Annotations": [],
+    "X": -179.40899240285933,
+    "Y": -147.18181611307659,
+    "Zoom": 0.77051684820224509
+  }
+}
