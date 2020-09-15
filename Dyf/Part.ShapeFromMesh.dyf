@@ -1,0 +1,271 @@
+{
+  "Uuid": "f3ed12ba-cb3d-4ade-b428-43b9c5436152",
+  "IsCustomNode": true,
+  "Category": "DynFreeCAD.Part",
+  "Description": "Create a FreeCAD Part from a FreeCAD Mesh",
+  "Name": "ShapeFromMesh",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "System.Object": {
+        "Key": "System.Object",
+        "Value": null
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import FreeCAD, Mesh, Part\r\n\r\ndoc = IN[0]\r\nmesh_obj = IN[1]\r\ntolerance = IN[2]\r\n\r\npart_obj = doc.addObject(\"Part::Feature\",\"\")\r\nshape = Part.Shape()\r\nshape.makeShapeFromMesh(mesh_obj.Mesh.Topology, tolerance)\r\npart_obj.Shape = shape\r\ndel shape\r\n\r\nOUT = part_obj\r\n\r\n\r\n",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "f7b1c4964f494a1ea9c70bc1efc7605f",
+      "Inputs": [
+        {
+          "Id": "e65f97335a1f4fe9a3ad1db4a318ce21",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f63bec4d51714671a2cce7ca3317a607",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31d494c971bd43f0bb58eaa255a64354",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fb354d29861b46cd82bbf32a2cf51cc4",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADDocument",
+        "TypeName": "System.Object",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "319b3d5944114687ae1c3b0375a1611b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e20ce1cae3604b428631c09698eb3f01",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "FreeCADPartObject:System.Object",
+      "Id": "ca546e5b05b44d6589e505c9a1e174fd",
+      "Inputs": [
+        {
+          "Id": "d77f38969bbb4fcab388a6b8b5d864b0",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADMeshObject",
+        "TypeName": "System.Object",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "e41e60f967c048c8b3c36400029e273d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "42b4035cf2fd43e298efd2d91478070f",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "tolerance",
+        "TypeName": "double",
+        "TypeRank": 0,
+        "DefaultValue": "0.1",
+        "Description": ""
+      },
+      "Id": "79d7694441004437850bdf4aa58e8541",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7d7883c21a0049b280a2b81a865243ba",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fb354d29861b46cd82bbf32a2cf51cc4",
+      "End": "d77f38969bbb4fcab388a6b8b5d864b0",
+      "Id": "f7f19958f83f4a98ae0f8c413f0adb8d"
+    },
+    {
+      "Start": "e20ce1cae3604b428631c09698eb3f01",
+      "End": "e65f97335a1f4fe9a3ad1db4a318ce21",
+      "Id": "a65348a0355a495d8bc0e3057769b11f"
+    },
+    {
+      "Start": "42b4035cf2fd43e298efd2d91478070f",
+      "End": "f63bec4d51714671a2cce7ca3317a607",
+      "Id": "1f9d60c6b2d04b54aea14c5c151e6769"
+    },
+    {
+      "Start": "7d7883c21a0049b280a2b81a865243ba",
+      "End": "31d494c971bd43f0bb58eaa255a64354",
+      "Id": "93259f16fbf34b06948f036f6f5369a8"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.9.0.2536",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -0.98322927951812744,
+      "EyeY": 6.239499568939209,
+      "EyeZ": 6.4521169662475586,
+      "LookX": 1.7041441202163696,
+      "LookY": -7.4385790824890137,
+      "LookZ": -10.534171104431152,
+      "UpX": 0.061113972216844559,
+      "UpY": 0.923879086971283,
+      "UpZ": -0.37777307629585266
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "f7b1c4964f494a1ea9c70bc1efc7605f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 515.5,
+        "Y": 600.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "319b3d5944114687ae1c3b0375a1611b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 100.5,
+        "Y": 543.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "ca546e5b05b44d6589e505c9a1e174fd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 739.5,
+        "Y": 600.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "e41e60f967c048c8b3c36400029e273d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 100.5,
+        "Y": 626.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "79d7694441004437850bdf4aa58e8541",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 100.5,
+        "Y": 709.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}
