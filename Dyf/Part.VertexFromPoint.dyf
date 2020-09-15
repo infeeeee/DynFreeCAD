@@ -1,0 +1,221 @@
+{
+  "Uuid": "427b132c-5adb-4e33-8412-39188be2482f",
+  "IsCustomNode": true,
+  "Category": "DynFreeCAD.Part",
+  "Description": "Create a FreeCAD Part vertex from a Dynamo point. Supports multiple points as input",
+  "Name": "VertexFromPoint",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "System.Object": {
+        "Key": "System.Object",
+        "Value": null
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import FreeCAD\r\nimport Part\r\n\r\ndoc = IN[0]\r\ndp = IN[1]\r\n\r\noutput = []\r\n\r\nvertex = doc.addObject(\"Part::Vertex\",\"\")\r\nvertex.X = dp.X\r\nvertex.Y = dp.Y\r\nvertex.Z = dp.Z\r\n\r\nOUT = vertex",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "3e04952640c343b3b3e3d4fbd8f46c4b",
+      "Inputs": [
+        {
+          "Id": "6dcd23dc6de84913ac65d5b1434ad826",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9c234283d4c4f959da27ef84d0eca06",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b38628329c84ef7870109ca83263f8a",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADDocument",
+        "TypeName": "System.Object",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "3af8fd36c368445ea8a5c9e246063c14",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d5109b005e60417eaac5e3fc473a0980",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "FreeCADPartVertex",
+      "Id": "ce8b24d3a4f94b1a92b394edbbbef90e",
+      "Inputs": [
+        {
+          "Id": "dade7e9ec50f486794fafc743ca8e57f",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "point",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "4a861cf79222429e8c05dfa6e577173f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e4bb10da0642480c97ae3068ffc78330",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "3b38628329c84ef7870109ca83263f8a",
+      "End": "dade7e9ec50f486794fafc743ca8e57f",
+      "Id": "87400bff147747fa9af5e2ba52d5fca6"
+    },
+    {
+      "Start": "d5109b005e60417eaac5e3fc473a0980",
+      "End": "6dcd23dc6de84913ac65d5b1434ad826",
+      "Id": "038e968a801747929ca2c6a5dad1b662"
+    },
+    {
+      "Start": "e4bb10da0642480c97ae3068ffc78330",
+      "End": "b9c234283d4c4f959da27ef84d0eca06",
+      "Id": "398da8e543464306976f1dff2c3581ac"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.9.0.2536",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -3.3515772819519043,
+      "EyeY": 55.872123718261719,
+      "EyeZ": 35.693805694580078,
+      "LookX": 9.0264806747436523,
+      "LookY": -49.901252746582031,
+      "LookZ": -33.247348785400391,
+      "UpX": 0.1786905825138092,
+      "UpY": 0.73135364055633545,
+      "UpZ": -0.65817290544509888
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "3e04952640c343b3b3e3d4fbd8f46c4b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 856.999999999999,
+        "Y": 429.5
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "3af8fd36c368445ea8a5c9e246063c14",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 459.999999999999,
+        "Y": 400.5
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "ce8b24d3a4f94b1a92b394edbbbef90e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1081.9999999999991,
+        "Y": 429.5
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "4a861cf79222429e8c05dfa6e577173f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 459.999999999999,
+        "Y": 484.5
+      }
+    ],
+    "Annotations": [],
+    "X": -207.0,
+    "Y": -47.0,
+    "Zoom": 1.0
+  }
+}
