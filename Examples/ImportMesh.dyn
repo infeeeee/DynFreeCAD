@@ -747,8 +747,8 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2536",
-      "RunType": "Automatic",
+      "Version": "2.9.0.2591",
+      "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
@@ -765,171 +765,171 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
-        "Name": "NewDocument",
         "Id": "b67ac573bcbd44d8a6d7591551580eb5",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "NewDocument",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 233.45879719179987,
         "Y": 186.80496325472848
       },
       {
-        "ShowGeometry": true,
-        "Name": "Directory Path",
         "Id": "c5ca697872064777a98e6ae910141394",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Directory Path",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": -134.54120280819973,
         "Y": 212.80496325472848
       },
       {
-        "ShowGeometry": true,
-        "Name": "Insert",
         "Id": "143b6528e7a04e448510d939d9bac012",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Insert",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 881.677039894421,
         "Y": 277.109226300763
       },
       {
-        "ShowGeometry": true,
-        "Name": "File Path",
         "Id": "077f9b6da4954d3cb95ce019c685478d",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "File Path",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 641.21320629916772,
         "Y": 517.56132230330115
       },
       {
-        "ShowGeometry": true,
-        "Name": "ListAllObjects",
         "Id": "8491a350342344c78410c8ba83a9eba8",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "ListAllObjects",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1311.5022009773907,
         "Y": 491.47474843842537
       },
       {
-        "ShowGeometry": true,
-        "Name": "List.Map",
         "Id": "ba928c4ba0e7440ea252b3f62812f341",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "List.Map",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2822.8689122358051,
         "Y": 501.26093848402985
       },
       {
-        "ShowGeometry": true,
-        "Name": "Create",
         "Id": "9eaf77cf258d4fb8aaad137e2088707a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Create",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1310.948592081,
         "Y": 144.582763552967
       },
       {
-        "ShowGeometry": true,
-        "Name": "SetPropertyByName",
         "Id": "974eba0093ac434f8ce2b61218fff520",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "SetPropertyByName",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1903.9437604469297,
         "Y": 102.83521686236003
       },
       {
-        "ShowGeometry": true,
-        "Name": "Code Block",
         "Id": "378390690ea142c1b2ff54b8fab719a7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1529.1342632078529,
         "Y": 274.96621867935977
       },
       {
-        "ShowGeometry": true,
-        "Name": "AddToGroup",
         "Id": "025fc6f4594b4aab97d07aeeb5cc0268",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "AddToGroup",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2436.73162956815,
         "Y": 262.173645010762
       },
       {
-        "ShowGeometry": true,
-        "Name": "String.StartsWith",
         "Id": "a40c301de1ae4d6fb5c0deb2b316ab09",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "String.StartsWith",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1867.7188906861811,
         "Y": 681.57682191548179
       },
       {
-        "ShowGeometry": true,
-        "Name": "Code Block",
         "Id": "731eab8ddbfb403e918646eee6a654ef",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1661.818419677985,
         "Y": 722.12893913268533
       },
       {
-        "ShowGeometry": true,
-        "Name": "List.FilterByBoolMask",
         "Id": "b2df5acf60f44da98f4640c510e8863a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2195.5624999368147,
         "Y": 558.42083611281828
       },
       {
-        "ShowGeometry": true,
-        "Name": "Document",
         "Id": "cfcb3a22580c4fbda5d6594813c222b7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Document",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 3267.8689122358051,
         "Y": 501.26093848402985
       },
       {
-        "ShowGeometry": true,
-        "Name": "Code Block",
         "Id": "31d9f110769241529e8480fd0460a6a4",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 3056.8689122358051,
         "Y": 505.47427181736316
       },
       {
-        "ShowGeometry": true,
-        "Name": "SaveAs",
         "Id": "2627b53346984a2d82a1ddb8397f0a86",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "SaveAs",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 3694.8689122358051,
         "Y": 433.26093848402985
       },
       {
-        "ShowGeometry": true,
-        "Name": "File Path",
         "Id": "4983364ba23d4d22acc2e1fb026fdeea",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "File Path",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 3267.8689122358051,
         "Y": 391.26093848402985
@@ -938,7 +938,7 @@
     "Annotations": [
       {
         "Id": "a250df19492a478881795ca8bcefb767",
-        "Title": "New document",
+        "Title": "New FreeCAD document",
         "Nodes": [
           "b67ac573bcbd44d8a6d7591551580eb5",
           "c5ca697872064777a98e6ae910141394"
@@ -949,13 +949,13 @@
         "Height": 198.0,
         "FontSize": 36.0,
         "InitialTop": 186.80496325472848,
-        "InitialHeight": 175.0,
+        "InitialHeight": 171.0,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
       {
         "Id": "d97c92ab8a0e4a098c82ac9afce64538",
-        "Title": "Import a mesh",
+        "Title": "Import a mesh to FreeCAD",
         "Nodes": [
           "143b6528e7a04e448510d939d9bac012",
           "077f9b6da4954d3cb95ce019c685478d"
@@ -966,7 +966,7 @@
         "Height": 387.45209600253816,
         "FontSize": 36.0,
         "InitialTop": 277.109226300763,
-        "InitialHeight": 364.45209600253816,
+        "InitialHeight": 385.45209600253816,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -984,7 +984,7 @@
         "Height": 328.13100181699974,
         "FontSize": 36.0,
         "InitialTop": 102.83521686236003,
-        "InitialHeight": 305.13100181699974,
+        "InitialHeight": 317.13100181699974,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1003,7 +1003,7 @@
         "Height": 388.10207347705642,
         "FontSize": 36.0,
         "InitialTop": 491.47474843842537,
-        "InitialHeight": 365.10207347705642,
+        "InitialHeight": 375.65419069425997,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1020,13 +1020,13 @@
         "Height": 411.08729347326778,
         "FontSize": 36.0,
         "InitialTop": 262.173645010762,
-        "InitialHeight": 388.08729347326778,
+        "InitialHeight": 384.08729347326778,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
       {
         "Id": "fdd9ccbe3f8e4fb592a8e285e2f26b98",
-        "Title": "Save the document",
+        "Title": "Save FreeCAD document",
         "Nodes": [
           "cfcb3a22580c4fbda5d6594813c222b7",
           "31d9f110769241529e8480fd0460a6a4",
@@ -1039,13 +1039,13 @@
         "Height": 260.21333333333331,
         "FontSize": 36.0,
         "InitialTop": 391.26093848402985,
-        "InitialHeight": 237.21333333333331,
+        "InitialHeight": 259.21333333333331,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       }
     ],
-    "X": -1855.8211969174488,
-    "Y": 181.60873482516445,
-    "Zoom": 0.67933048377427041
+    "X": -497.47462612592165,
+    "Y": 497.25510335826465,
+    "Zoom": 0.65119502076621716
   }
 }
