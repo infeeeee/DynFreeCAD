@@ -1,14 +1,18 @@
 {
-  "Uuid": "1db55df2-c69e-429d-8170-b0f7dc40ece7",
+  "Uuid": "ae610a98-a3df-432a-865d-54f9eaa782fe",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Object",
-  "Description": "Get the FreeCAD document of an object",
-  "Name": "Document",
+  "Category": "DynFreeCAD.Object.Set",
+  "Description": "Move a FreeCAD object by a Dynamo vector",
+  "Name": "MoveByVector",
   "ElementResolver": {
     "ResolutionMap": {
       "System.Object": {
         "Key": "System.Object",
         "Value": null
+      },
+      "Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
       }
     }
   },
@@ -18,15 +22,24 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\nobj = IN[0]\r\n\r\nOUT = obj.Document",
+      "Code": "import FreeCAD\r\n\r\nobj = IN[0]\r\nvec = IN[1]\r\n\r\n\r\nobj.Placement.move(FreeCAD.Vector(vec.X, vec.Y, vec.Z))\r\n\r\nOUT = obj",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "0756cce38ae8484980c5711d9a06d3ae",
+      "Id": "1fb890b946344a3f854500c8e6531eab",
       "Inputs": [
         {
-          "Id": "8abd75dcd7694d67b2607e34c0682449",
+          "Id": "6152d8a42d834a43900a6c27d8de51fc",
           "Name": "IN[0]",
           "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "06732785fe5047e797254d0456abeeb1",
+          "Name": "IN[1]",
+          "Description": "Input #1",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -35,7 +48,7 @@
       ],
       "Outputs": [
         {
-          "Id": "f728a4e082cf42dcb59572a69d77e8f2",
+          "Id": "440ac3e71e634eea861d4e6ba5eb3729",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -57,11 +70,11 @@
         "DefaultValue": null,
         "Description": ""
       },
-      "Id": "4cc42ddcba2a46fb8567329e08e3a0e7",
+      "Id": "a800383d72324bc4af291958112cb347",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "ed5d765fdc8240c09e2c7731d2d29628",
+          "Id": "17c156faceb74c6ab8691547cb40e811",
           "Name": "",
           "Description": "Symbol",
           "UsingDefaultValue": false,
@@ -77,11 +90,11 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "FreeCADDocument: System.Object",
-      "Id": "c63e61b8752c484c8c085891ea390dcb",
+      "Symbol": "FreeCADObject",
+      "Id": "99955d8ddea04a148bc62079cb918fca",
       "Inputs": [
         {
-          "Id": "2d72c8a9cf8848c78145ee2997ec9eea",
+          "Id": "533134fe46b140aea2624c27ac62bcd8",
           "Name": "",
           "Description": "",
           "UsingDefaultValue": false,
@@ -93,18 +106,49 @@
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "vector",
+        "TypeName": "Autodesk.DesignScript.Geometry.Vector",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "22a416bc5ca6408eaa2b61db0738b242",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5fa43692c17c45018bd844768bc9db26",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
     }
   ],
   "Connectors": [
     {
-      "Start": "f728a4e082cf42dcb59572a69d77e8f2",
-      "End": "2d72c8a9cf8848c78145ee2997ec9eea",
-      "Id": "fa732b3ce1024993a08e1a3b0c053e2f"
+      "Start": "440ac3e71e634eea861d4e6ba5eb3729",
+      "End": "533134fe46b140aea2624c27ac62bcd8",
+      "Id": "1df52478fb5243b8bdb58d05fbd30e99"
     },
     {
-      "Start": "ed5d765fdc8240c09e2c7731d2d29628",
-      "End": "8abd75dcd7694d67b2607e34c0682449",
-      "Id": "207bb2a362624940af4489579ce4547f"
+      "Start": "17c156faceb74c6ab8691547cb40e811",
+      "End": "6152d8a42d834a43900a6c27d8de51fc",
+      "Id": "65779df34ff34f038adf9a8faa59d446"
+    },
+    {
+      "Start": "5fa43692c17c45018bd844768bc9db26",
+      "End": "06732785fe5047e797254d0456abeeb1",
+      "Id": "551c4105f1e141549b5898c48a0b5b8f"
     }
   ],
   "Dependencies": [],
@@ -115,7 +159,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2536",
+      "Version": "2.9.0.2591",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -133,39 +177,49 @@
     },
     "NodeViews": [
       {
-        "Id": "0756cce38ae8484980c5711d9a06d3ae",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
+        "ShowGeometry": true,
         "Name": "Python Script",
-        "ShowGeometry": true,
-        "Excluded": false,
-        "X": 682.49648782572092,
-        "Y": 566.40732989977528
-      },
-      {
-        "Id": "4cc42ddcba2a46fb8567329e08e3a0e7",
+        "Id": "1fb890b946344a3f854500c8e6531eab",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 655.0,
+        "Y": 560.75
+      },
+      {
+        "ShowGeometry": true,
         "Name": "Input",
-        "ShowGeometry": true,
-        "Excluded": false,
-        "X": 300.49648782572092,
-        "Y": 566.40732989977528
-      },
-      {
-        "Id": "c63e61b8752c484c8c085891ea390dcb",
+        "Id": "a800383d72324bc4af291958112cb347",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Output",
-        "ShowGeometry": true,
         "Excluded": false,
-        "X": 906.49648782572092,
-        "Y": 566.40732989977528
+        "X": 273.0,
+        "Y": 531.75
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "99955d8ddea04a148bc62079cb918fca",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 879.0,
+        "Y": 560.75
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "22a416bc5ca6408eaa2b61db0738b242",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 273.0,
+        "Y": 615.75
       }
     ],
     "Annotations": [],
-    "X": -101.46376011569475,
-    "Y": -6.3457121594741466,
-    "Zoom": 0.8887892282971559
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
   }
 }

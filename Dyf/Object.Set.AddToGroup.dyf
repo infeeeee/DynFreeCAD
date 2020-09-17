@@ -1,7 +1,7 @@
 {
   "Uuid": "817852eb-d135-41c1-8447-b0b456b8d490",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Object",
+  "Category": "DynFreeCAD.Object.Set",
   "Description": "Add a FreeCAD object to a Group",
   "Name": "AddToGroup",
   "ElementResolver": {

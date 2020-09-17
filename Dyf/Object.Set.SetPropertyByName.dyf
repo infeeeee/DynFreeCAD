@@ -1,7 +1,7 @@
 {
   "Uuid": "dcea7d94-f322-4ae9-b4b0-c2899358f9c4",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Object",
+  "Category": "DynFreeCAD.Object.Set",
   "Description": "Set a property of a FreeCAD object by name",
   "Name": "SetPropertyByName",
   "ElementResolver": {

@@ -1,9 +1,9 @@
 {
-  "Uuid": "2cb1b065-d215-40bd-9f39-d5de324c6782",
+  "Uuid": "3ab5e6e7-028b-498a-ae3b-21220d1d0360",
   "IsCustomNode": true,
-  "Category": "DynFreeCAD.Object",
-  "Description": "Name of a FreeCAD object",
-  "Name": "Name",
+  "Category": "DynFreeCAD.Object.Get",
+  "Description": "Get the ID of a FreeCAD object",
+  "Name": "ID",
   "ElementResolver": {
     "ResolutionMap": {
       "System.Object": {
@@ -25,11 +25,11 @@
         "DefaultValue": null,
         "Description": ""
       },
-      "Id": "733972c5d49b4de98c1ca01582dc8714",
+      "Id": "f9da346b016d401eb87e27989188dc63",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "2d95f54185c846109b0b73d5833f459d",
+          "Id": "63a17653bcbe45c9a30b6da3fb0041ea",
           "Name": "",
           "Description": "Symbol",
           "UsingDefaultValue": false,
@@ -44,13 +44,13 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\nobj = IN[0]\r\n\r\nOUT= obj.Name\r\n",
+      "Code": "import FreeCAD\r\n\r\nobj = IN[0]\r\n\r\nOUT= obj.ID\r\n",
       "Engine": "CPython3",
       "VariableInputPorts": true,
-      "Id": "0cab8bc6a0ed4e65b83a39eda0ca066f",
+      "Id": "3e89ea8ff88d44688cb86d08439e05d7",
       "Inputs": [
         {
-          "Id": "a8b053dc0fe64ab0a38a7b16cd4750bc",
+          "Id": "a5656a5088f94073b8a36c5f3c0c7f9c",
           "Name": "IN[0]",
           "Description": "Input #0",
           "UsingDefaultValue": false,
@@ -61,7 +61,7 @@
       ],
       "Outputs": [
         {
-          "Id": "86bb41f569ad498d903be669b4192d91",
+          "Id": "d49a42964d834da08542db1761140e2d",
           "Name": "OUT",
           "Description": "Result of the python script",
           "UsingDefaultValue": false,
@@ -78,10 +78,10 @@
       "NodeType": "OutputNode",
       "ElementResolver": null,
       "Symbol": "string",
-      "Id": "2233c662c59249ee8cdd2863a6f2cafd",
+      "Id": "ee1a2ab6842443d790e196b8f195cdd9",
       "Inputs": [
         {
-          "Id": "ee6d332ecd2e4b18867d50946caffc54",
+          "Id": "dea5d725cbf34c7e9d15c9346c0c8441",
           "Name": "",
           "Description": "",
           "UsingDefaultValue": false,
@@ -97,14 +97,14 @@
   ],
   "Connectors": [
     {
-      "Start": "2d95f54185c846109b0b73d5833f459d",
-      "End": "a8b053dc0fe64ab0a38a7b16cd4750bc",
-      "Id": "67c4372a94a049abae932c40dfa24099"
+      "Start": "63a17653bcbe45c9a30b6da3fb0041ea",
+      "End": "a5656a5088f94073b8a36c5f3c0c7f9c",
+      "Id": "972cb7323ba0489397c9a322801ef79d"
     },
     {
-      "Start": "86bb41f569ad498d903be669b4192d91",
-      "End": "ee6d332ecd2e4b18867d50946caffc54",
-      "Id": "3b5d7b78186246d9bed0ec839b0fbe58"
+      "Start": "d49a42964d834da08542db1761140e2d",
+      "End": "dea5d725cbf34c7e9d15c9346c0c8441",
+      "Id": "6f32ab8fda154218be1e99297a61d2a2"
     }
   ],
   "Dependencies": [],
@@ -135,37 +135,37 @@
       {
         "ShowGeometry": true,
         "Name": "Input",
-        "Id": "733972c5d49b4de98c1ca01582dc8714",
+        "Id": "f9da346b016d401eb87e27989188dc63",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 687.0,
-        "Y": 675.5
+        "X": 547.0,
+        "Y": 462.0
       },
       {
         "ShowGeometry": true,
         "Name": "Python Script",
-        "Id": "0cab8bc6a0ed4e65b83a39eda0ca066f",
+        "Id": "3e89ea8ff88d44688cb86d08439e05d7",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1196.0,
-        "Y": 659.5
+        "X": 1056.0,
+        "Y": 446.0
       },
       {
         "ShowGeometry": true,
         "Name": "Output",
-        "Id": "2233c662c59249ee8cdd2863a6f2cafd",
+        "Id": "ee1a2ab6842443d790e196b8f195cdd9",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1519.0,
-        "Y": 701.5
+        "X": 1379.0,
+        "Y": 488.0
       }
     ],
     "Annotations": [],
-    "X": -502.0673697239107,
-    "Y": -90.727229270176963,
-    "Zoom": 0.95404292488281262
+    "X": -500.0,
+    "Y": -30.0,
+    "Zoom": 1.0
   }
 }
