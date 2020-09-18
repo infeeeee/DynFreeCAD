@@ -103,6 +103,12 @@ You can also ask questions on the related project's forums:
 - [FreeCAD Forum](https://forum.freecadweb.org/)
 - [OSArch Community](https://community.osarch.org/)
 
+## Alternativ graphical programing interfaces for FreeCAD
+
+- [GitHub - microelly2/NodeEditor: Node editor for FreeCAD with PyFLow](https://github.com/microelly2/NodeEditor)
+
+- [GitHub - nortikin/sverchok: Sverchok](https://github.com/nortikin/sverchok) Blender addin with FreeCAD support
+
 ## License
 
 MIT
