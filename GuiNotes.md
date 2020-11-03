@@ -13,5 +13,3 @@ pip install pywin32
 cd C:\Users\username\AppData\Local\Programs\Python\Python38\Scripts
 python pywin32_postinstall.py -install
 ```
-
-

@@ -12,7 +12,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import sys\r\nfreecad_bin_path=IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\nimport FreeCAD\r\n\r\n# libs:\r\nimport area\r\nimport DraftUtils\r\nimport Drawing\r\nimport Fem\r\nimport flatmesh\r\nimport Image\r\nimport Import\r\nimport Inspection\r\nimport Measure\r\nimport Mesh\r\nimport MeshPart\r\nimport Part\r\nimport Path\r\nimport PathSimulator\r\nimport Points\r\nimport Raytracing\r\nimport ReverseEngineering\r\nimport Robot\r\nimport Sketcher\r\nimport Surface\r\n\r\n#mods:\r\n#import Arch\r\n#import Draft\r\nimport Material\r\nimport OpenSCAD\r\nimport Part\r\nimport Show\r\nimport Spreadsheet\r\nimport TechDraw\r\nimport Test\r\nimport Tux",
+      "Code": "import sys\r\nfreecad_bin_path=IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\nimport FreeCAD\r\n\r\n# libs:\r\nimport area\r\nimport DraftUtils\r\nimport Drawing\r\nimport Fem\r\nimport flatmesh\r\nimport Image\r\nimport Import\r\nimport Inspection\r\nimport Measure\r\nimport Mesh\r\nimport MeshPart\r\nimport Part\r\nimport Path\r\nimport PathSimulator\r\nimport Points\r\nimport Raytracing\r\nimport ReverseEngineering\r\nimport Robot\r\nimport Sketcher\r\nimport Surface\r\n\r\n#mods:\r\n#import Arch\r\n#import Draft\r\nimport Material\r\nimport OpenSCAD\r\nimport Part\r\nimport Show\r\nimport Spreadsheet\r\nimport TechDraw\r\nimport Test\r\nimport Tux\r\n\r\nOUT = [\"FreeCAD API successfully loaded\", \"You can now close this graph\", FreeCAD.Version()]",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "e0865df7f6d34590b2dfe14e9403a463",
@@ -61,9 +61,43 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "4090be5e5a5d487085f5893371b7f59e",
+      "Inputs": [
+        {
+          "Id": "2ec7d2cf67fb497e8a4d7559e6ac380d",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "88151fdae9a640d0aa086912eba70020",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
     }
   ],
   "Connectors": [
+    {
+      "Start": "903ec54c69464527a46a597c56a6e851",
+      "End": "2ec7d2cf67fb497e8a4d7559e6ac380d",
+      "Id": "ba749eef7edb40648c9336bc5855a60d"
+    },
     {
       "Start": "d1ae4ba80a384ebeb8dac8a03b8adf55",
       "End": "29d7830bb19f42528142ac14d296552d",
@@ -78,7 +112,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2536",
+      "Version": "2.10.0.3071",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -103,7 +137,7 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "X": 1212.2154095576407,
-        "Y": 692.82371479767244
+        "Y": 716.07371479767244
       },
       {
         "ShowGeometry": true,
@@ -112,13 +146,23 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 705.21540955764056,
-        "Y": 692.82371479767244
+        "X": 844.21540955764067,
+        "Y": 716.07371479767244
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "4090be5e5a5d487085f5893371b7f59e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1436.2154095576407,
+        "Y": 716.07371479767244
       }
     ],
     "Annotations": [],
-    "X": -179.40899240285933,
-    "Y": -147.18181611307659,
-    "Zoom": 0.77051684820224509
+    "X": -630.71540955764067,
+    "Y": -515.07371479767244,
+    "Zoom": 1.0
   }
 }

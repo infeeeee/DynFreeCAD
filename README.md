@@ -12,7 +12,7 @@ Dynamo nodes for the FreeCAD API
 
 - FreeCAD built with python 3.8.
   
-  - Download a prebuilt from here (0.19): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8) The 'site_packages1' version works better.
+  - Download a prebuilt from here (0.19): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8) The 'site_packages1' version works better. *Note: This version built with Python 3.8.1*
   
   - You can build yourself a different verision, follow FreeCAD's doumentation
 
@@ -34,14 +34,15 @@ Unfortunately due to a bug in Dynamo 2.7, these nodes are only usable in 2.8 wit
 
 ### Compatibility matrix
 
-Table updated: 2020-09-07
+Table updated: 2020-11-03
 
-| Dynamo | cPython in Dynamo | FreeCAD API | DynFreeCAD | Revit  |
-| ------ | ----------------- | ----------- | ---------- | ------ |
-| 2.6    | ❌                 | ❌           | ❌          | 2021.1 |
-| 2.7    | 3.7               | ✔           | ❌          | ❌      |
-| 2.8    | 3.8               | ✔           | ✔          | ❌      |
-| 2.9    | 3.8               | ✔           | ✔          | ❌      |
+| Dynamo | Stable Dynamo | cPython in Dynamo | FreeCAD API | DynFreeCAD | Revit  |
+| ------ | ------------- | ----------------- | ----------- | ---------- | ------ |
+| 2.6    | ✔             | ❌                 | ❌           | ❌          | 2021.1 |
+| 2.7    | ✔             | 3.7               | ✔           | ❌          | ❌      |
+| 2.8    | ✔             | 3.8.3             | ✔           | ✔          | ❌      |
+| 2.9    | ❌             | 3.8.3             | ✔           | ✔          | ❌      |
+| 2.10   | ❌             | 3.8.3             | ✔           | ✔          | ❌      |
 
 ## Usage and tips
 
@@ -55,9 +56,9 @@ See `Examples` folder for some Dynamo documents.
 
 ### Load the FreeCAD API
 
-There is some bug in Dynamo, so you cannot load FreeCAD libs on later nodes, unless they were loaded in a first python node. So before using DynFreeCAD, you have to load libraries:
+[There is a bug in Dynamo](https://forum.dynamobim.com/t/how-to-use-import-from-custom-path-in-multiple-cpython-blocks/55071), so you cannot load FreeCAD libs on later nodes, unless they were loaded in a first python node. So before using DynFreeCAD, you have to load libraries:
 
-- Open `ApiLoader.dyn` from the Examples folder. 
+- Open `ApiLoader.dyn` from `Examples\ApiLoaders` folder. 
 
 - Click `Run`
 

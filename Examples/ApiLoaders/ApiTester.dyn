@@ -1,0 +1,215 @@
+{
+  "Uuid": "5f28e12e-f081-4185-a37f-d2f39d275382",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "ApiTester",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import sys\r\nfreecad_bin_path=IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\nimport FreeCAD\r\n\r\nOUT = True",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "e0865df7f6d34590b2dfe14e9403a463",
+      "Inputs": [
+        {
+          "Id": "29d7830bb19f42528142ac14d296552d",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "903ec54c69464527a46a597c56a6e851",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "E:\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "InputValue": "E:\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "NodeType": "ExtensionNode",
+      "Id": "ec8f3c35d6d744aa9b0643992794290a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d1ae4ba80a384ebeb8dac8a03b8adf55",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import FreeCAD\r\nimport Mesh\r\n\r\nOUT = [\"FreeCAD API is loaded\", dir(Mesh)]",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "782e6fdebfab4a88a5faa85187b85d23",
+      "Inputs": [
+        {
+          "Id": "4616d508337b495aae7004dee7530f23",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "20a8f64e6b674e9d957ae2bfa5bfec94",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "d59ef99a16dc4e6fbf4b44176d172764",
+      "Inputs": [
+        {
+          "Id": "2ed8ab22f61b41fe97e0abaef660dedf",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9bc2a647af3941d7a0ae9074ead6561d",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "903ec54c69464527a46a597c56a6e851",
+      "End": "4616d508337b495aae7004dee7530f23",
+      "Id": "92bc3c310f7146ae9b8666f9c1dca0b5"
+    },
+    {
+      "Start": "d1ae4ba80a384ebeb8dac8a03b8adf55",
+      "End": "29d7830bb19f42528142ac14d296552d",
+      "Id": "43ebd590746b4d27bf273a3cd39aadf8"
+    },
+    {
+      "Start": "20a8f64e6b674e9d957ae2bfa5bfec94",
+      "End": "2ed8ab22f61b41fe97e0abaef660dedf",
+      "Id": "f44e41788a0c487ebf6c95819a2ae346"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.8.0.2471",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 22.621225357055664,
+      "EyeY": 14.080301284790039,
+      "EyeZ": 46.588848114013672,
+      "LookX": -25.82097053527832,
+      "LookY": 5.4120502471923828,
+      "LookZ": -54.598430633544922,
+      "UpX": 0.12855936586856842,
+      "UpY": 0.95371711254119873,
+      "UpZ": 0.27183881402015686
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "e0865df7f6d34590b2dfe14e9403a463",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1345.5904095576407,
+        "Y": 775.57371479767244
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "ec8f3c35d6d744aa9b0643992794290a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 977.59040955764067,
+        "Y": 775.57371479767244
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "782e6fdebfab4a88a5faa85187b85d23",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1569.5904095576407,
+        "Y": 775.57371479767244
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "d59ef99a16dc4e6fbf4b44176d172764",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1793.5904095576407,
+        "Y": 775.57371479767244
+      }
+    ],
+    "Annotations": [],
+    "X": -333.59040955764067,
+    "Y": -353.07371479767244,
+    "Zoom": 1.0
+  }
+}
