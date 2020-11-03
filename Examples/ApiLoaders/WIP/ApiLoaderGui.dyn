@@ -1,0 +1,139 @@
+{
+  "Uuid": "5f28e12e-f081-4185-a37f-d2f39d275382",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "ApiLoaderGui",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import sys\r\nfreecad_bin_path = IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\ntry:\r\n    errorReport = None\r\n\r\n\r\n    from PySide2.QtWidgets import QApplication\r\n\r\n    import FreeCAD\r\n    import FreeCADGui\r\n\r\n    if not QApplication.instance():\r\n        app = QApplication(sys.argv)\r\n    else:\r\n        app = QApplication.instance()\r\n    \r\n    FreeCADGui.showMainWindow()\r\n\r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n\r\nif errorReport == None:\r\n    output = []\r\n\r\n    fc_version = FreeCAD.Version()\r\n    sys_path = sys.path\r\n\r\n    for outer in [fc_version, sys_path, FreeCAD, app]:\r\n        output.append(outer)    \r\n\r\n    OUT = output\r\nelse:\r\n    OUT = errorReport\r\n",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "0add43bbc3b943fd80550d8360b02246",
+      "Inputs": [
+        {
+          "Id": "17d3a3d2c2e046ddb5c40089cc603e9a",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ceaae1353164f638b0831def01b3dc6",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "E:\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "InputValue": "E:\\FreeCAD-conda-PY3.8-site_packages1\\bin",
+      "NodeType": "ExtensionNode",
+      "Id": "968965f483134f1a98e1170f1342b6d5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "70d8b91b39114dc696e6899786a4c764",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "70d8b91b39114dc696e6899786a4c764",
+      "End": "17d3a3d2c2e046ddb5c40089cc603e9a",
+      "Id": "bc24985e6bd04bfbab8a9ac58598c5d0"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.0.3071",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "0add43bbc3b943fd80550d8360b02246",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 830.5,
+        "Y": 257.5
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "968965f483134f1a98e1170f1342b6d5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 462.5,
+        "Y": 257.5
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "233ba39a7aa945a79f5d25233171e5f1",
+        "Title": "This graph is not working yet!!!\r\nDo not use!!!",
+        "Nodes": [],
+        "Left": 796.0,
+        "Top": 147.0,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 11.0,
+    "Y": 34.0,
+    "Zoom": 1.0
+  }
+}
