@@ -44,7 +44,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\n\r\ndocPath = IN[0]\r\ndoc = IN[1]\r\n\r\ndoc.saveAs(docPath)\r\n\r\nOUT = docSave",
+      "Code": "import FreeCAD\r\n\r\ndocPath = IN[0]\r\ndoc = IN[1]\r\n\r\ntry:\r\n    errorReport = None\r\n\r\n    doc.saveAs(docPath)\r\n\r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n\r\nif errorReport == None:\r\n    OUT = doc\r\n\r\nelse:\r\n    OUT = errorReport\r\n",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "4ec9ca83a65b40fd9dfa42910b86f18a",
@@ -149,72 +149,73 @@
   ],
   "Dependencies": [],
   "NodeLibraryDependencies": [],
+  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2536",
+      "Version": "2.10.0.3071",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -17.0,
-      "EyeY": 24.0,
-      "EyeZ": 50.0,
-      "LookX": 12.0,
-      "LookY": -13.0,
-      "LookZ": -58.0,
-      "UpX": 0.0,
-      "UpY": 1.0,
-      "UpZ": 0.0
+      "EyeX": -34.668365478515625,
+      "EyeY": 27.416149139404297,
+      "EyeZ": 35.663555145263672,
+      "LookX": 34.668365478515625,
+      "LookY": -37.315914154052734,
+      "LookZ": -35.663555145263672,
+      "UpX": 0.28905442357063293,
+      "UpY": 0.90996140241622925,
+      "UpZ": -0.29735153913497925
     },
     "NodeViews": [
       {
+        "ShowGeometry": true,
+        "Name": "Input",
         "Id": "6d7a607aba5c40879ee01d5972cdef7c",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Input",
-        "ShowGeometry": true,
         "Excluded": false,
-        "X": 0.0,
-        "Y": 0.0
+        "X": -249.5,
+        "Y": -14.5
       },
       {
+        "ShowGeometry": true,
+        "Name": "Python Script",
         "Id": "4ec9ca83a65b40fd9dfa42910b86f18a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Python Script",
-        "ShowGeometry": true,
         "Excluded": false,
-        "X": 0.0,
-        "Y": 0.0
+        "X": 148.5,
+        "Y": 14.5
       },
       {
+        "ShowGeometry": true,
+        "Name": "Output",
         "Id": "7d8587c3e8144b04a1c0bfa749122671",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Output",
-        "ShowGeometry": true,
         "Excluded": false,
-        "X": 0.0,
-        "Y": 0.0
+        "X": 372.5,
+        "Y": 14.5
       },
       {
+        "ShowGeometry": true,
+        "Name": "Input",
         "Id": "06e66cb80ae1466bb5e84c4aff065653",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
-        "Name": "Input",
-        "ShowGeometry": true,
         "Excluded": false,
-        "X": 0.0,
-        "Y": 0.0
+        "X": -249.5,
+        "Y": 69.5
       }
     ],
     "Annotations": [],
-    "X": 0.0,
-    "Y": 0.0,
+    "X": 844.0,
+    "Y": 377.0,
     "Zoom": 1.0
   }
 }

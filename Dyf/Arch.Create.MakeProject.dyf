@@ -70,7 +70,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\nimport Arch\r\nimport Draft\r\n\r\ndoc = IN[0]\r\nsite = IN[1]\r\ntry:\r\n    errorReport = None\r\n\r\n    # set active document\r\n    if FreeCAD.ActiveDocument != doc:\r\n        FreeCAD.setActiveDocument(doc.Name)\r\n    \r\n    # check if site is a none\r\n    if type(site) is None:\r\n        obj = Arch.makeProject()\r\n    else:\r\n        obj = Arch.makeProject(site)\r\n        \r\n    # Autogroup, I'm nut sure if I need it\r\n    #Draft.autogroup(obj)\r\n\r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n\r\nif errorReport == None:\r\n    # This will run if no error. \r\n    OUT = [doc,obj]\r\n    \r\nelse:\r\n    OUT = [errorReport,type(site)]\r\n\r\n",
+      "Code": "import FreeCAD\r\nimport Arch\r\nimport Draft\r\n\r\ndoc = IN[0]\r\nsite = IN[1]\r\ntry:\r\n    errorReport = None\r\n\r\n    # set active document\r\n    if FreeCAD.ActiveDocument != doc:\r\n        FreeCAD.setActiveDocument(doc.Name)\r\n    \r\n    # check if site is a none\r\n    if type(site) is None:\r\n        obj = Arch.makeProject()\r\n    else:\r\n        obj = Arch.makeProject(site)\r\n        \r\n    # Autogroup, I'm nut sure if I need it\r\n    #Draft.autogroup(obj)\r\n\r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n\r\nif errorReport == None:\r\n    # This will run if no error. \r\n    OUT = [doc,obj]\r\n    \r\nelse:\r\n    OUT = [errorReport,]\r\n\r\n",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "a50ed4a3e5b541519996109fc5b07257",
@@ -231,15 +231,15 @@
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -17.0,
-      "EyeY": 24.0,
-      "EyeZ": 50.0,
-      "LookX": 12.0,
-      "LookY": -13.0,
-      "LookZ": -58.0,
-      "UpX": 0.0,
-      "UpY": 1.0,
-      "UpZ": 0.0
+      "EyeX": -34.668365478515625,
+      "EyeY": 27.416149139404297,
+      "EyeZ": 35.663555145263672,
+      "LookX": 34.668365478515625,
+      "LookY": -37.315914154052734,
+      "LookZ": -35.663555145263672,
+      "UpX": 0.28905442357063293,
+      "UpY": 0.90996140241622925,
+      "UpZ": -0.29735153913497925
     },
     "NodeViews": [
       {

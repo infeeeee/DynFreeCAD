@@ -18,7 +18,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD, Mesh, Part\r\n\r\ndoc = IN[0]\r\nmesh_obj = IN[1]\r\ntolerance = IN[2]\r\n\r\npart_obj = doc.addObject(\"Part::Feature\",\"\")\r\nshape = Part.Shape()\r\nshape.makeShapeFromMesh(mesh_obj.Mesh.Topology, tolerance)\r\npart_obj.Shape = shape\r\ndel shape\r\n\r\nOUT = part_obj\r\n\r\n\r\n",
+      "Code": "import FreeCAD, Mesh, Part\r\n\r\ndoc = IN[0]\r\nmesh_obj = IN[1]\r\ntolerance = IN[2]\r\n\r\ntry:\r\n    errorReport = None\r\n\r\n    part_obj = doc.addObject(\"Part::Feature\",\"\")\r\n    shape = Part.Shape()\r\n    shape.makeShapeFromMesh(mesh_obj.Mesh.Topology, tolerance)\r\n    part_obj.Shape = shape\r\n    del shape\r\n\r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n\r\nif errorReport == None:\r\n    OUT = part_obj\r\n\r\nelse:\r\n    OUT = errorReport",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "f7b1c4964f494a1ea9c70bc1efc7605f",
@@ -195,21 +195,21 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2536",
+      "Version": "2.10.0.3071",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -0.98322927951812744,
-      "EyeY": 6.239499568939209,
-      "EyeZ": 6.4521169662475586,
-      "LookX": 1.7041441202163696,
-      "LookY": -7.4385790824890137,
-      "LookZ": -10.534171104431152,
-      "UpX": 0.061113972216844559,
-      "UpY": 0.923879086971283,
-      "UpZ": -0.37777307629585266
+      "EyeX": -34.668365478515625,
+      "EyeY": 27.416149139404297,
+      "EyeZ": 35.663555145263672,
+      "LookX": 34.668365478515625,
+      "LookY": -37.315914154052734,
+      "LookZ": -35.663555145263672,
+      "UpX": 0.28905442357063293,
+      "UpY": 0.90996140241622925,
+      "UpZ": -0.29735153913497925
     },
     "NodeViews": [
       {

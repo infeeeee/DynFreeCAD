@@ -18,7 +18,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import FreeCAD\r\nimport Mesh\r\n\r\ndoc = IN[0]\r\npointlist = IN[1]\r\ntriangles = []\r\n\r\n\r\nfor tri in pointlist:\r\n    for p in tri:\r\n        triangles.append([p.X, p.Y, p.Z])\r\n        \r\nobj = doc.addObject(\"Mesh::Feature\", \"\")\r\nobj.Mesh = Mesh.Mesh(triangles)\r\n\r\nOUT = obj",
+      "Code": "import FreeCAD\r\nimport Mesh\r\n\r\ndoc = IN[0]\r\npointlist = IN[1]\r\ntriangles = []\r\n\r\ntry:\r\n    errorReport = None\r\n    \r\n    for tri in pointlist:\r\n        if not isinstance(tri, list):\r\n            errorReport = \"Use list of pointsinstead of unordered points!\"\r\n            break\r\n        for p in tri:\r\n            triangles.append([p.X, p.Y, p.Z])\r\n            \r\n    obj = doc.addObject(\"Mesh::Feature\", \"\")\r\n    obj.Mesh = Mesh.Mesh(triangles)\r\n    \r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n\r\nif errorReport == None:\r\n    OUT = obj\r\n\r\nelse:\r\n    OUT = errorReport",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "d1d6eeedac29459ab8a8dd854737ab79",
@@ -88,7 +88,7 @@
       "Parameter": {
         "Name": "points",
         "TypeName": "var",
-        "TypeRank": -1,
+        "TypeRank": 2,
         "DefaultValue": null,
         "Description": ""
       },
@@ -155,21 +155,21 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.9.0.2536",
+      "Version": "2.10.0.3071",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -0.98322927951812744,
-      "EyeY": 6.239499568939209,
-      "EyeZ": 6.4521169662475586,
-      "LookX": 1.7041441202163696,
-      "LookY": -7.4385790824890137,
-      "LookZ": -10.534171104431152,
-      "UpX": 0.061113972216844559,
-      "UpY": 0.923879086971283,
-      "UpZ": -0.37777307629585266
+      "EyeX": -658.007080078125,
+      "EyeY": 542.49810791015625,
+      "EyeZ": 673.13726806640625,
+      "LookX": 604.6534423828125,
+      "LookY": -650.82952880859375,
+      "LookZ": -622.0106201171875,
+      "UpX": 0.28905442357063293,
+      "UpY": 0.90996140241622925,
+      "UpZ": -0.29735153913497925
     },
     "NodeViews": [
       {
