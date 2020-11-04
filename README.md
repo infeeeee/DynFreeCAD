@@ -37,9 +37,9 @@ Unfortunately due to a bug in Dynamo 2.7, these nodes are only usable in 2.8 wit
 Table updated: 2020-11-03
 
 | Dynamo | Stable Dynamo | cPython in Dynamo | FreeCAD API | DynFreeCAD | Revit  |
-| ------ | ------------- | ----------------- | ----------- | ---------- | ------ |
+| ------ |:-------------:|:-----------------:|:-----------:|:----------:|:------:|
 | 2.6    | ✔             | ❌                 | ❌           | ❌          | 2021.1 |
-| 2.7    | ✔             | 3.7               | ✔           | ❌          | ❌      |
+| 2.7    | ✔             | 3.7.3             | ✔           | ❌          | ❌      |
 | 2.8    | ✔             | 3.8.3             | ✔           | ✔          | ❌      |
 | 2.9    | ❌             | 3.8.3             | ✔           | ✔          | ❌      |
 | 2.10   | ❌             | 3.8.3             | ✔           | ✔          | ❌      |
@@ -56,9 +56,11 @@ See `Examples` folder for some Dynamo documents.
 
 ### Load the FreeCAD API
 
-[There is a bug in Dynamo](https://forum.dynamobim.com/t/how-to-use-import-from-custom-path-in-multiple-cpython-blocks/55071), so you cannot load FreeCAD libs on later nodes, unless they were loaded in a first python node. So before using DynFreeCAD, you have to load libraries:
+[There is a bug in Dynamo](https://forum.dynamobim.com/t/how-to-use-import-from-custom-path-in-multiple-cpython-blocks/55071), so you cannot load FreeCAD libs on latter nodes, unless they were loaded in a first python node. So before using DynFreeCAD, you have to load libraries:
 
 - Open `ApiLoader.dyn` from `Examples\ApiLoaders` folder. 
+  
+  - If you want to use Arch and Draft nodes open `ApiLoaderArch.dyn` instead. They require other dependencies, see [Arch and Draft Setup in the wiki](https://github.com/infeeeee/DynFreeCAD/wiki/Arch-and-Draft-Setup)
 
 - Click `Run`
 
@@ -68,7 +70,9 @@ See `Examples` folder for some Dynamo documents.
 
 You have to do this every time you want to use the FreeCAD api in Dynamo. I hope sometimes this will be fixed, or at least I find a better workaround. 
 
-Follow this forum thread for more info: [DynamoForum](https://forum.dynamobim.com/t/how-to-use-import-from-custom-path-in-multiple-cpython-blocks/55071)
+### Using with the FreeCAD Gui visible
+
+Currently it's not possible. Run the graph, save the file, than open it in FreeCAD.
 
 ### Open or create a new document
 

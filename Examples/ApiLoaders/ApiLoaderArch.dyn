@@ -12,7 +12,7 @@
     {
       "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
       "NodeType": "PythonScriptNode",
-      "Code": "import sys\r\nfreecad_bin_path=IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\ntry:\r\n    errorReport = None\r\n    \r\n    import FreeCAD\r\n    \r\n    # libs:\r\n    import area\r\n    import DraftUtils\r\n    import Drawing\r\n    import Fem\r\n    import flatmesh\r\n    import Image\r\n    import Import\r\n    import Inspection\r\n    import Measure\r\n    import Mesh\r\n    import MeshPart\r\n    import Part\r\n    import Path\r\n    import PathSimulator\r\n    import Points\r\n    import Raytracing\r\n    import ReverseEngineering\r\n    import Robot\r\n    import Sketcher\r\n    import Surface\r\n    \r\n    #mods:\r\n    import Arch\r\n    import Draft\r\n    import Material\r\n    import OpenSCAD\r\n    import Part\r\n    import Show\r\n    import Spreadsheet\r\n    import TechDraw\r\n    import Test\r\n    import Tux\r\n    \r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n    \r\nif errorReport == None:\r\n    OUT = [\"FreeCAD API successfully loaded\", \"You can now close this graph\", FreeCAD.Version()]\r\nelse:\r\n    OUT = errorReport\r\n\r\n",
+      "Code": "import sys\r\nfreecad_bin_path=IN[0]\r\nsys.path.append(freecad_bin_path)\r\n\r\ntry:\r\n    errorReport = None\r\n    \r\n    import FreeCAD\r\n    \r\n    # libs:\r\n    import area\r\n    import DraftUtils\r\n    import Drawing\r\n    import Fem\r\n    import flatmesh\r\n    import Image\r\n    import Import\r\n    import Inspection\r\n    import Measure\r\n    import Mesh\r\n    import MeshPart\r\n    import Part\r\n    import Path\r\n    import PathSimulator\r\n    import Points\r\n    import Raytracing\r\n    import ReverseEngineering\r\n    import Robot\r\n    import Sketcher\r\n    import Surface\r\n    \r\n    #mods:\r\n    import Arch\r\n    import Draft\r\n    import Material\r\n    import OpenSCAD\r\n    import Part\r\n    import Show\r\n    import Spreadsheet\r\n    import TechDraw\r\n    import Test\r\n    import Tux\r\n    \r\nexcept:\r\n    import traceback\r\n    errorReport = traceback.format_exc()\r\n    \r\nif errorReport == None:\r\n    OUT = [\"FreeCAD API with Arch and Draft WBs successfully loaded\", \"You can now close this graph\", FreeCAD.Version()]\r\nelse:\r\n    OUT = errorReport\r\n\r\n",
       "Engine": "CPython3",
       "VariableInputPorts": true,
       "Id": "e0865df7f6d34590b2dfe14e9403a463",
@@ -130,31 +130,31 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": true,
-        "Name": "Python Script",
         "Id": "e0865df7f6d34590b2dfe14e9403a463",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1212.2154095576407,
         "Y": 716.07371479767244
       },
       {
-        "ShowGeometry": true,
-        "Name": "Directory Path",
         "Id": "ec8f3c35d6d744aa9b0643992794290a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Directory Path",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 844.21540955764067,
         "Y": 716.07371479767244
       },
       {
-        "ShowGeometry": true,
-        "Name": "Watch",
         "Id": "4090be5e5a5d487085f5893371b7f59e",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Watch",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1436.2154095576407,
         "Y": 716.07371479767244

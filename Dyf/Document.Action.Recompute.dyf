@@ -1,0 +1,170 @@
+{
+  "Uuid": "c34e2114-4877-4045-89ce-aa9a521a2840",
+  "IsCustomNode": true,
+  "Category": "DynFreeCAD.Document",
+  "Description": "Recompute a FreeCAD Document",
+  "Name": "Recompute",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "System.Object": {
+        "Key": "System.Object",
+        "Value": null
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "FreeCADDocument",
+        "TypeName": "System.Object",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "cfa0adc13e7546c2a1cd42b8c1e56ddd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f109fb2f2f1b451191caf5b781c51e65",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "FreeCADDocument: System.Object",
+      "Id": "05f3d8565e8b45a58e8eda9aae3a8437",
+      "Inputs": [
+        {
+          "Id": "1e0dea2543e247909dc4c8dadbbb5019",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import FreeCAD\r\n\r\ndoc = IN[0]\r\n\r\ndoc.recompute()\r\n\r\nOUT = doc",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "894ab7f97d77487d82df84be147d6129",
+      "Inputs": [
+        {
+          "Id": "ec5e9ef2ea7e4cfcaa97a8ea54005915",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6142ec351327435a8694b6a30a63c69b",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f109fb2f2f1b451191caf5b781c51e65",
+      "End": "ec5e9ef2ea7e4cfcaa97a8ea54005915",
+      "Id": "a7074ffa0a3b4ad7916a4684fb7ed8f5"
+    },
+    {
+      "Start": "6142ec351327435a8694b6a30a63c69b",
+      "End": "1e0dea2543e247909dc4c8dadbbb5019",
+      "Id": "189ac7bad3f54eb0bf934e256dd7ae8b"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.9.0.2536",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "Id": "cfa0adc13e7546c2a1cd42b8c1e56ddd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 156.0,
+        "Y": 406.0
+      },
+      {
+        "Id": "05f3d8565e8b45a58e8eda9aae3a8437",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 762.0,
+        "Y": 406.0
+      },
+      {
+        "Id": "894ab7f97d77487d82df84be147d6129",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 538.0,
+        "Y": 406.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}
