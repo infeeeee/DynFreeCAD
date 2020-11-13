@@ -9,10 +9,14 @@ Dynamo nodes for the FreeCAD API
 ## Requirements
 
 - Dynamo 2.8+. Download from [dynamobuilds.com](https://dynamobuilds.com/)
-
-- FreeCAD built with python 3.8.
   
-  - Download a prebuilt from here (0.19): [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8) The 'site_packages1' version works better. *Note: This version built with Python 3.8.1*
+  - Select one of DynamoCoreRuntimes. Download, extract, you will find DynamoSndbox.exe inside
+
+- FreeCAD built with python 3.8: 
+  
+  - **Recommended:** Daily 0.19 **Conda** build: [Release 0.19_pre · FreeCAD/FreeCAD · GitHub](https://github.com/FreeCAD/FreeCAD/releases/tag/0.19_pre) *(Python 3.8.6)*
+  
+  - If daily builds are down: [Release FreeCAD Win Conda PY3.8 · sgrogan/FreeCAD · GitHub](https://github.com/sgrogan/FreeCAD/releases/tag/PY3.8) The 'site_packages1' version works better. *(Python 3.8.1)*
   
   - You can build yourself a different verision, follow FreeCAD's doumentation
 
@@ -34,14 +38,14 @@ Unfortunately due to a bug in Dynamo 2.7, these nodes are only usable in 2.8 wit
 
 ### Compatibility matrix
 
-Table updated: 2020-11-03
+Table updated: 2020-11-13
 
 | Dynamo | Stable Dynamo | cPython in Dynamo | FreeCAD API | DynFreeCAD | Revit  |
 | ------ |:-------------:|:-----------------:|:-----------:|:----------:|:------:|
 | 2.6    | ✔             | ❌                 | ❌           | ❌          | 2021.1 |
 | 2.7    | ✔             | 3.7.3             | ✔           | ❌          | ❌      |
 | 2.8    | ✔             | 3.8.3             | ✔           | ✔          | ❌      |
-| 2.9    | ❌             | 3.8.3             | ✔           | ✔          | ❌      |
+| 2.9    | ✔             | 3.8.3             | ✔           | ✔          | ❌      |
 | 2.10   | ❌             | 3.8.3             | ✔           | ✔          | ❌      |
 
 ## Usage and tips
