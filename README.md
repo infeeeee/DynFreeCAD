@@ -10,7 +10,7 @@ Dynamo nodes for the FreeCAD API
 
 - Dynamo 2.8+. Download from [dynamobuilds.com](https://dynamobuilds.com/)
   
-  - Select one of DynamoCoreRuntimes. Download, extract, you will find DynamoSndbox.exe inside
+  - Select one of DynamoCoreRuntimes. Download, extract, you will find DynamoSandbox.exe inside
 
 - FreeCAD built with python 3.8: 
   
@@ -75,6 +75,8 @@ See `Examples` folder for some Dynamo documents.
 You have to do this every time you want to use the FreeCAD api in Dynamo. I hope sometimes this will be fixed, or at least I find a better workaround. 
 
 ### Using with the FreeCAD Gui visible
+
+*Soon...*
 
 Currently it's not possible. Run the graph, save the file, than open it in FreeCAD.
 
